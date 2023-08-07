@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import AppLayout from "./components/Layout/AppLayout";
+import { IoLogoWhatsapp } from "react-icons/io";
 function App() {
+  // Get a variable from local storage
+  var chat = sessionStorage.getItem("want_chat");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="font-tailwind bg-gray-900">
+        <AppLayout />
+      </div>
+    </>
   );
 }
 
