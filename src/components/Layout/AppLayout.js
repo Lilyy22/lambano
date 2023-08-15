@@ -103,55 +103,23 @@ const AppLayout = () => {
         </div>
       </section>
 
-      <section className="max-w-[1280px] mx-auto mt-20 mb-36">
-        <div className="flex flex-wrap md:justify-evenly">
-          <div className="w-full md:w-[23%] text-center mb-6 text-gray-200">
-            <img
-              src="https://media.gettyimages.com/id/1324872027/photo/african-female-gardener-working-in-greenhouse.jpg?s=612x612&w=gi&k=20&c=6QkGl4sV6LsYE-YQ3504kU_ww4Vwh1zutr0ikHdyTAE="
-              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-            />
-            <h1 className="font-bold text-xl capitalize mb-2">
-              Environment management
-            </h1>
-            <p className="text-gray-500 text-sm px-4">
-              we approach our environment with care and attention.
-            </p>
-          </div>
-          <div className="w-full md:w-[23%] text-center mb-6 text-gray-200">
-            <img
-              src="https://scatec.com/wp-content/uploads/sites/7/2020/03/Human-rights_Scatec-Solar-676x410.jpg"
-              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-            />
-            <h1 className="font-bold text-xl capitalize mb-2">
-              Community engagement
-            </h1>
-            <p className="text-gray-500 text-sm px-4">
-              We give back 40 percent to the community from our revenue.
-            </p>
-          </div>
-          <div className="w-full md:w-[23%] text-center mb-6 text-gray-200">
-            <img
-              src="https://www.amnesty.org.uk/files/styles/poster/s3/2020-04/269218_%282%29.jpg?VersionId=5qqjobVSTI67CwDLG_gDbEOvq2Nw6QFV&itok=e-_6vTMh"
-              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-            />
-            <h1 className="font-bold text-xl capitalize mb-2">Human rights</h1>
-            <p className="text-gray-500 text-sm px-4">
-              We do everything we can under the law to protect our workforce
-              from any human rights violations
-            </p>
-          </div>
-          <div className="w-full md:w-[23%] text-center text-gray-200">
-            <img
-              src="https://nosa.co.za/wp-content/uploads/2020/12/December-blog-2-01-scaled.jpg"
-              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-            />
-            <h1 className="font-bold text-xl capitalize mb-2">
-              Health and safety
-            </h1>
-            <p className="text-gray-500 text-sm px-4">
-              We believe that productivity doesnot come before safety.
-            </p>
-          </div>
+      <section className="bg-gradient-to-r from-[#7F7FD5] via-[#86A8E7] to-[#91EAE4]">
+        <div className="max-w-[1280px] mx-2 md:mx-auto mt-12 py-12">
+          <p className="w-1/2">
+            Lambano Metals is a minerals and metals supplier headquartered at
+            Addis Ababa, Ethiopia. We are focused on industrial minerals and
+            metals
+          </p>
+          <p className="w-1/2">
+            We are open and ready in making collaboration with other firms in
+            order to take the mining industry of the nation to the next level.
+          </p>
+          <button
+              type="button"
+              className="px-5 py-2 my-6 rounded-md bg-gray-400 font-bold capitalize"
+            >
+              Get in touch
+            </button>
         </div>
       </section>
 
@@ -220,7 +188,6 @@ const AppLayout = () => {
         </div>
 
         <div className="flex flex-wrap justify-center my-28">
-         
           <div className="w-full md:w-1/3 md:m-auto">
             <h1 className="font-bold text-3xl capitalize mb-4 text-[#79f1f7]">
               Consulting Service
@@ -265,6 +232,58 @@ const AppLayout = () => {
               src="https://www.deere.africa/assets/images/region-1/homepage/jdf-prl-homepage-afme.jpg"
               className="rounded-md w-full object-cover grayscale hover:grayscale-0"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-[1280px] mx-auto mt-20 mb-36">
+        <div className="flex flex-wrap md:justify-evenly">
+          <div className="w-full md:w-[23%] text-center mb-6 text-gray-200">
+            <img
+              src="https://media.gettyimages.com/id/1324872027/photo/african-female-gardener-working-in-greenhouse.jpg?s=612x612&w=gi&k=20&c=6QkGl4sV6LsYE-YQ3504kU_ww4Vwh1zutr0ikHdyTAE="
+              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
+            />
+            <h1 className="font-bold text-xl capitalize mb-2">
+              Environment management
+            </h1>
+            <p className="text-gray-500 text-sm px-4">
+              we approach our environment with care and attention.
+            </p>
+          </div>
+          <div className="w-full md:w-[23%] text-center mb-6 text-gray-200">
+            <img
+              src="https://scatec.com/wp-content/uploads/sites/7/2020/03/Human-rights_Scatec-Solar-676x410.jpg"
+              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
+            />
+            <h1 className="font-bold text-xl capitalize mb-2">
+              Community engagement
+            </h1>
+            <p className="text-gray-500 text-sm px-4">
+              We give back 40 percent to the community from our revenue.
+            </p>
+          </div>
+          <div className="w-full md:w-[23%] text-center mb-6 text-gray-200">
+            <img
+              src="https://www.amnesty.org.uk/files/styles/poster/s3/2020-04/269218_%282%29.jpg?VersionId=5qqjobVSTI67CwDLG_gDbEOvq2Nw6QFV&itok=e-_6vTMh"
+              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
+            />
+            <h1 className="font-bold text-xl capitalize mb-2">Human rights</h1>
+            <p className="text-gray-500 text-sm px-4">
+              We do everything we can under the law to protect our workforce
+              from any human rights violations
+            </p>
+          </div>
+          <div className="w-full md:w-[23%] text-center text-gray-200">
+            <img
+              src="https://nosa.co.za/wp-content/uploads/2020/12/December-blog-2-01-scaled.jpg"
+              className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
+            />
+            <h1 className="font-bold text-xl capitalize mb-2">
+              Health and safety
+            </h1>
+            <p className="text-gray-500 text-sm px-4">
+              We believe that productivity doesnot come before safety.
+            </p>
           </div>
         </div>
       </section>
