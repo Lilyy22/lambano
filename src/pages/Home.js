@@ -23,7 +23,7 @@ const Home = () => {
             <div className="flex flex-wrap justify-between">
               <div className="md:w-1/2 my-auto md:pr-4">
                 <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200">
-                  We pride ourselves in giving full-cycle services
+                  Unleashing Nature's Riches for Sustainable Success.
                 </h1>
                 <p className="text-gray-500 py-4 lg:py-6 max-w-lg">
                   Embracing the Earth's Treasures: Your Premier Destination for

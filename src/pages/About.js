@@ -17,9 +17,9 @@ const About = () => {
                 We pride ourselves in giving full-cycle services
               </h1>
               <p className="text-gray-500 py-4 lg:py-6">
-                Embracing the Earth's Treasures: Your Premier Destination for
-                Dependable Mineral Supply and Unparalleled Mining Expertise,
-                Enabling Sustainable Growth and Success.
+                Empowering Industries with Reliable Minerals and Unmatched
+                Mining Proficiency, Fuelling Sustainable Advancement and
+                Triumph.
               </p>
               <OutlineButton text="Get in touch" goto="/contact" />
             </div>
@@ -36,8 +36,8 @@ const About = () => {
           </div>
         </section>
 
-        <section>
-          <div className="max-w-xl mx-auto my-12">
+        <section className="my-2">
+          <div className="max-w-xl mx-auto border-y border-gray-800 py-12">
             <h1 className="text-3xl font-bold text-gray-200 mb-6 text-center">
               Company Description
             </h1>
@@ -60,12 +60,12 @@ const About = () => {
           <div className="max-w-[1280px] mx-auto text-center">
             <div className="flex flex-wrap md:justify-evenly my-24">
               <div className="w-full max-w-sm text-center mb-6 p-4 bg-[#293041]/80 border border-[#434959] rounded-xl">
-                <img
+                {/* <img
                   loading="lazy"
                   src="https://scatec.com/wp-content/uploads/sites/7/2020/03/Human-rights_Scatec-Solar-676x410.jpg"
                   alt="happy african labors"
                   className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-                />
+                /> */}
                 <h1 className="font-bold text-xl capitalize mb-2 text-gray-100">
                   Our Vision
                 </h1>
@@ -77,12 +77,12 @@ const About = () => {
               </div>
 
               <div className="w-full max-w-sm text-center mb-6 p-6 bg-[#293041]/80  border border-[#434959] rounded-xl">
-                <img
+                {/* <img
                   loading="lazy"
                   src="https://scatec.com/wp-content/uploads/sites/7/2020/03/Human-rights_Scatec-Solar-676x410.jpg"
                   alt="happy african labors"
                   className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-                />
+                /> */}
                 <h1 className="font-bold text-xl capitalize mb-2 text-gray-100">
                   Our Mission
                 </h1>
