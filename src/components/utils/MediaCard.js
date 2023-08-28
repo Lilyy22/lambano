@@ -11,7 +11,7 @@ const MediaCard = ({ title, body, img }) => {
           className="rounded-full w-32 h-32 object-cover mx-auto mb-4 border border-gray-500"
         />
         <h1 className="font-bold text-xl capitalize mb-2">{title}</h1>
-        <p className="text-gray-500 text-sm px-4">{body}</p>
+        <p className="text-gray-500 text-sm px-4 max-w-sm mx-auto">{body}</p>
       </div>
     </>
   );

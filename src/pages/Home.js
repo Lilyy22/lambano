@@ -6,7 +6,7 @@ import MediaCard from "../components/utils/MediaCard";
 import { Accordion } from "../components/utils/Accordion";
 import { blogdata, faqData } from "../data/data";
 import Small from "../components/utils/Small";
-import { SolidButton } from "../components/utils/Button";
+import { OutlineButton, SolidButton } from "../components/utils/Button";
 
 const Home = () => {
   const bgurl =
@@ -30,14 +30,11 @@ const Home = () => {
                   Dependable Mineral Supply and Unparalleled Mining Expertise,
                   Enabling Sustainable Growth and Success.
                 </p>
-                <SolidButton text="Get in touch" />
+                <div className="flex gap-4">
+                  <SolidButton text="Get in touch" goto="/contact" />
+                  <OutlineButton text="Learn More" goto="/service" />
+                </div>
               </div>
-              {/* <div className="w-full md:w-[30%] relative isolate">
-                <img
-                  src={require("../assets/hh.png")}
-                  className="w-[70%] mx-auto md:ml-auto"
-                />
-              </div> */}
               <div className="md:w-1/2 my-auto md:pr-4">
                 <div className="relative block group " href="#0">
                   <div
@@ -60,7 +57,7 @@ const Home = () => {
           </div>
 
           {/* Items */}
-          <div className="pt-20 max-w-sm md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-5">
+          <div className="pt-20 md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-5">
             {/* Item */}
             <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
               <svg
@@ -218,21 +215,25 @@ const Home = () => {
                 src="https://plus.unsplash.com/premium_photo-1661866916518-1dcc1e907c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                 alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                 className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                loading="lazy"
               />
               <img
                 src="https://images.unsplash.com/photo-1611377247946-ae36f1d725f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                 alt="Top down view of walnut card tray with embedded magnets and card groove."
                 className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                loading="lazy"
               />
               <img
                 src="https://images.unsplash.com/photo-1584715642530-3cb85fc36539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                 alt="Side of walnut card tray with card groove and recessed card area."
                 className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                loading="lazy"
               />
               <img
                 src="https://images.unsplash.com/photo-1627768919962-fb6af351759c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=680&q=80"
                 alt="Walnut card tray filled with cards and card angled in dedicated groove."
                 className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                loading="lazy"
               />
             </div>
           </div>
@@ -323,7 +324,7 @@ the mining work."
 
         <section
           className="py-24 bg-custom-white-500 bg-cover bg-blend-overlay"
-          style={{ backgroundImage: `url(${require("../assets/nbg.png")})` }}
+          // style={{ backgroundImage: `url(${require("../assets/nbg.png")})` }}
         >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
@@ -362,22 +363,21 @@ the mining work."
               )}
             </div>
           </div>
-
-          <div className="md:mx-20 lg:w-[70%] lg:mx-auto pt-32 md:pt-40 text-center">
-            <Small text="Find out more" />
-            <h1 className="font-bold text-3xl capitalize mb-12">
-              {" "}
-              Frequently Asked Questions
-            </h1>
-            <div className="text-slate-300 border-1 border-indigo-400 rounded">
-              {faqData.map(({ question, content, i }) => {
-                return (
-                  <Accordion question={question} content={content} key={i} />
-                );
-              })}
-            </div>
-          </div>
         </section>
+
+        <div className="md:mx-20 lg:w-[70%] lg:mx-auto py-24 text-center">
+          <Small text="Find out more" />
+          <h1 className="font-bold text-3xl capitalize mb-12 text-gray-200">
+            Frequently Asked Questions
+          </h1>
+          <div className="text-slate-300 rounded max-w-5xl mx-auto">
+            {faqData.map(({ question, content, i }) => {
+              return (
+                <Accordion question={question} content={content} key={i} />
+              );
+            })}
+          </div>
+        </div>
       </AppLayout>
     </>
   );

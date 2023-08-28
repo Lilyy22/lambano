@@ -7,12 +7,12 @@ export const Accordion = ({ question, content }) => {
   return (
     <>
       <button
-        className="w-full bg-slate-100 rounded-md my-1 py-3 px-3 text-left text-lg border text-slate-900"
+        className="w-full bg-[#293041]/80 rounded-md my-1 py-3 px-3 text-left text-lg border border-gray-800 text-slate-900"
         onClick={() => {
           setIsActive(!isActive);
         }}
       >
-        <span className="tansition-all duration-1000 ease-in-out flex justify-between">
+        <span className="tansition-all duration-1000 ease-in-out flex justify-between text-gray-300">
           {question}
           {isActive ? (
             <IoIosRemove

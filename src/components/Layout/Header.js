@@ -4,29 +4,9 @@ import { SolidButton } from "../utils/Button";
 
 const Header = () => {
   const [menuToggle, setMenuToggle] = useState();
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 0;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-
-    document.addEventListener("scroll", handleScroll);
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrolled]);
-
   return (
     <>
-      <header
-        className={`bg-custom-dark-500 sticky top-0 w-full z-50 transition-all delay-100 ease-in py-2 md:py-4 border-b border-gray-800 ${
-          scrolled ? "backdrop-blur-md py-2" : ""
-        }`}
-      >
+      <header className="bg-custom-dark-500 sticky top-0 w-full z-50 transition-all delay-100 ease-in py-2 md:py-4 border-b border-gray-800">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex justify-between items-center w-full relative">
             <div className="my-auto font-bold text-xl text-gray-300">
@@ -54,9 +34,12 @@ const Header = () => {
                 <li className="">
                   <NavLink
                     to="/"
-                    className={`text-[#6d727e] block transition hover:text-white ${({
-                      isActive,
-                    }) => (isActive ? " text-white" : "")}`}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "active text-white"
+                        : " " +
+                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
+                    }
                   >
                     Home
                   </NavLink>
@@ -64,27 +47,38 @@ const Header = () => {
                 <li className="">
                   <NavLink
                     to="/about"
-                    className={`text-[#6d727e] block transition hover:text-white ${({
-                      isActive,
-                    }) => (isActive ? " text-white" : "")}`}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "active text-white"
+                        : " " +
+                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
+                    }
                   >
                     About
                   </NavLink>
                 </li>
                 <li className="">
                   <NavLink
-                    className={`text-[#6d727e] block transition hover:text-white ${({
-                      isActive,
-                    }) => (isActive ? " text-white" : "")}`}
+                    to="/service"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "active text-white"
+                        : " " +
+                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
+                    }
                   >
                     Service
                   </NavLink>
                 </li>
                 <li className="">
                   <NavLink
-                    className={`text-[#6d727e] block transition hover:text-white mr-6 ${({
-                      isActive,
-                    }) => (isActive ? " text-white" : "")}`}
+                    to="/sustainablity"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "active text-white mr-6"
+                        : " " +
+                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white mr-6"
+                    }
                   >
                     Sustainability
                   </NavLink>
