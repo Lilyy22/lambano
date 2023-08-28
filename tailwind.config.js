@@ -4,7 +4,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'tailwind': ['Inter', 'san-serif'],
+        tailwind: ["Inter", "san-serif"],
+      },
+      colors: {
+        "custom-dark": {
+          500: "#111a32",
+        },
+        "custom-white": {
+          500: "#DFE0E2",
+        },
+        "custom-purple": {
+          500: "#9333ea",
+        },
       },
     },
   },

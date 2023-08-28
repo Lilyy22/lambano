@@ -1,14 +1,20 @@
-import AppLayout from "./components/Layout/AppLayout";
-import { IoLogoWhatsapp } from "react-icons/io";
-function App() {
-  // Get a variable from local storage
-  var chat = sessionStorage.getItem("want_chat");
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
+function App() {
   return (
     <>
-      <div className="font-tailwind bg-gray-900">
-        <AppLayout />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/terms-conditions" element={<Terms />} />
+      </Routes>
     </>
   );
 }
