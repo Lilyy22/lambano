@@ -90,7 +90,7 @@ const Footer = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    href="#"
+                    to="/about"
                     className="text-gray-500 transition hover:opacity-75"
                   >
                     About
@@ -119,7 +119,7 @@ const Footer = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    href="#"
+                    href="/contact"
                     className="text-gray-500 transition hover:opacity-75"
                   >
                     Contact

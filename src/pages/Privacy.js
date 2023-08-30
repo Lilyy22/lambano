@@ -7,28 +7,159 @@ const Privacy = () => {
     <>
       <AppLayout>
         <section className="max-w-[1280px] mx-auto py-20 text-gray-200">
-          <div className="flex flex-wrap md:flex-nowrap">
-            <div class="w-1/4 sticky top-2 z-20 border-l-2 border-gray-800">
-              <h2 class="text-lg font-bold mb-4">Table of Contents</h2>
-              <ul class="space-y-2">
-                <li className="box-border hover:border-l-2 border-red-400">
-                  <a href="#autocoll" class="table-of-contents-link">
-                    Automatic collection of information
-                  </a>
-                </li>
-                <li>
-                  <a href="#personalinfo" class="table-of-contents-link">
-                    Collection of personal information
-                  </a>
-                </li>
-                <li>
-                  <a href="#section3" class="table-of-contents-link">
-                    Section 3
-                  </a>
-                </li>
-              </ul>
+          <div className="flex flex-wrap md:flex-nowrap relative">
+            {/* navigator */}
+            <div className="w-1/4 ml-2 mr-6 hidden md:block">
+              <nav className="sticky top-24 z-40">
+                <h2 className="text-lg font-bold mb-4 text-gray-500">
+                  Privacy Policy
+                </h2>
+                <ul className="pl-4 border-l-2 border-gray-800 text-gray-600">
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section1"
+                      className={
+                        "table-of-contents-link text-sm hover:text-gray-400"
+                      }
+                    >
+                      Automatic collection of information
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section2"
+                      className={
+                        "table-of-contents-link text-sm hover:text-gray-400"
+                      }
+                    >
+                      Collection of personal information
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section3"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Privacy of children
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section4"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Use and processing of collected information
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section5"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Managing information
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section6"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Disclosure of information
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section7"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Retention of information
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section8"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Cookies
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section9"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Data analytics
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section10"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Do Not Track signals
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section11"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Social media features
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section12"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Email marketing
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section13"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Links to other resources
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section14"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Information security
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section15"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Data breach
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section16"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Changes and amendments
+                    </a>
+                  </li>
+                  <li className="box-border mb-2">
+                    <a
+                      href="#section17"
+                      className="table-of-contents-link text-sm hover:text-gray-400"
+                    >
+                      Acceptance of this policy
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-            <div className="w-2/3">
+
+            <div className="w-full md:flex-1 text-base mx-2">
               <h1 className="font-bold text-3xl">Privacy Policy</h1>
               <p className="my-10 text-gray-500">
                 We respect your privacy and are committed to protecting it
@@ -58,7 +189,7 @@ const Privacy = () => {
                 practices of companies that we do not own or control, or to
                 individuals that we do not employ or manage.
               </p>
-              <h3 className="font-bold" id="autocoll">
+              <h3 className="font-bold" id="section1">
                 Automatic collection of information
               </h3>
               <p className="my-10 text-gray-500">
@@ -78,7 +209,7 @@ const Privacy = () => {
                 This statistical information is not otherwise aggregated in such
                 a way that would identify any particular User of the system.
               </p>
-              <h3 className="font-bold" id="personalinfo">
+              <h3 className="font-bold" id="section2">
                 Collection of personal information
               </h3>
               <p className="my-10 text-gray-500">
@@ -94,7 +225,7 @@ const Privacy = () => {
                 when you create an account, or fill any forms on the Website.
                 When required, this information may include the following:
               </p>
-              <ul>
+              <ul className="list-disc text-gray-500 pl-4">
                 <li>
                   Account details (such as user name, unique user ID, password,
                   etc)
@@ -122,7 +253,9 @@ const Privacy = () => {
                 information is mandatory are welcome to contact us.
               </p>
 
-              <h3 className="font-bold">Privacy of children</h3>
+              <h3 className="font-bold" id="section3">
+                Privacy of children
+              </h3>
 
               <p className="my-10 text-gray-500">
                 We do not knowingly collect any Personal Information from
@@ -146,7 +279,7 @@ const Privacy = () => {
                 Personal Information when online without their permission.
               </p>
 
-              <h3 className="font-bold">
+              <h3 className="font-bold" id="section4">
                 Use and processing of collected information
               </h3>
 
@@ -224,7 +357,9 @@ const Privacy = () => {
                 into a contract.
               </p>
 
-              <h3 className="font-bold">Managing information</h3>
+              <h3 className="font-bold" id="section5">
+                Managing information
+              </h3>
 
               <p className="my-10 text-gray-500">
                 You are able to delete certain Personal Information we have
@@ -239,7 +374,9 @@ const Privacy = () => {
                 the Website or simply by contacting us.
               </p>
 
-              <h3 className="font-bold">Disclosure of information</h3>
+              <h3 className="font-bold" id="section6">
+                Disclosure of information
+              </h3>
 
               <p className="my-10 text-gray-500">
                 Depending on the requested Services or as necessary to complete
@@ -273,7 +410,9 @@ const Privacy = () => {
                 or respond to a government request.
               </p>
 
-              <h3 className="font-bold">Retention of information</h3>
+              <h3 className="font-bold" id="section7">
+                Retention of information
+              </h3>
 
               <p className="my-10 text-gray-500">
                 We will retain and use your Personal Information for the period
@@ -293,7 +432,9 @@ const Privacy = () => {
                 enforced after the expiration of the retention period.
               </p>
 
-              <h3 className="font-bold">Cookies</h3>
+              <h3 className="font-bold" id="section8">
+                Cookies
+              </h3>
 
               <p className="my-10 text-gray-500">
                 Our Website and Services use &ldquo;cookies&rdquo; to help
@@ -314,7 +455,9 @@ const Privacy = () => {
                 settings to decline cookies if you prefer.
               </p>
 
-              <h3 className="font-bold">Data analytics</h3>
+              <h3 className="font-bold" id="section9">
+                Data analytics
+              </h3>
 
               <p className="my-10 text-gray-500">
                 Our Website and Services may use third-party analytics tools
@@ -332,7 +475,9 @@ const Privacy = () => {
                 individual User.
               </p>
 
-              <h3 className="font-bold">Do Not Track signals</h3>
+              <h3 className="font-bold" id="section10">
+                Do Not Track signals
+              </h3>
 
               <p className="my-10 text-gray-500">
                 Some browsers incorporate a Do Not Track feature that signals to
@@ -351,7 +496,9 @@ const Privacy = () => {
                 you, visit internetcookies.com
               </p>
 
-              <h3 className="font-bold">Social media features</h3>
+              <h3 className="font-bold" id="section11">
+                Social media features
+              </h3>
 
               <p className="my-10 text-gray-500">
                 Our Website and Services may include social media features, such
@@ -366,7 +513,9 @@ const Privacy = () => {
                 of their respective providers.
               </p>
 
-              <h3 className="font-bold">Email marketing</h3>
+              <h3 className="font-bold" id="section12">
+                Email marketing
+              </h3>
 
               <p className="my-10 text-gray-500">
                 We offer electronic newsletters to which you may voluntarily
@@ -406,7 +555,9 @@ const Privacy = () => {
                 adjust your device settings accordingly.
               </p>
 
-              <h3 className="font-bold">Links to other resources</h3>
+              <h3 className="font-bold" id="section13">
+                Links to other resources
+              </h3>
 
               <p className="my-10 text-gray-500">
                 The Website and Services contain links to other resources that
@@ -418,7 +569,9 @@ const Privacy = () => {
                 Information.
               </p>
 
-              <h3 className="font-bold">Information security</h3>
+              <h3 className="font-bold" id="section14">
+                Information security
+              </h3>
 
               <p className="my-10 text-gray-500">
                 We secure information you provide on computer servers in a
@@ -449,7 +602,9 @@ const Privacy = () => {
                 appropriate measures to protect this information.
               </p>
 
-              <h3 className="font-bold">Data breach</h3>
+              <h3 className="font-bold" id="section15">
+                Data breach
+              </h3>
 
               <p className="my-10 text-gray-500">
                 In the event we become aware that the security of the Website
@@ -467,7 +622,9 @@ const Privacy = () => {
                 the Website, send you an email.
               </p>
 
-              <h3 className="font-bold">Changes and amendments</h3>
+              <h3 className="font-bold" id="section16">
+                Changes and amendments
+              </h3>
 
               <p className="my-10 text-gray-500">
                 We reserve the right to modify this Policy or its terms related
@@ -489,7 +646,9 @@ const Privacy = () => {
                 was stated at the time your Personal Information was collected.
               </p>
 
-              <h3 className="font-bold">Acceptance of this policy</h3>
+              <h3 className="font-bold" id="section17">
+                Acceptance of this policy
+              </h3>
 
               <p className="my-10 text-gray-500">
                 You acknowledge that you have read this Policy and agree to all
@@ -501,7 +660,9 @@ const Privacy = () => {
                 https://www.websitepolicies.com/privacy-policy-generator
               </p>
 
-              <h3 className="font-bold">Contacting us</h3>
+              <h3 className="font-bold" id="section18">
+                Contacting us
+              </h3>
 
               <p className="my-10 text-gray-500">
                 If you have any questions, concerns, or complaints regarding

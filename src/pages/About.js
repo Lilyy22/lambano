@@ -106,7 +106,7 @@ const About = () => {
         {/* values */}
         <section className="bg-custom-white-500">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-            <div>
+            <div className="lg:order-last">
               <div>
                 <Small text="Values" />
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -160,13 +160,13 @@ const About = () => {
               <img
                 src="https://plus.unsplash.com/premium_photo-1661866916518-1dcc1e907c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                 alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-                className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                className="hidden md:block rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
                 loading="lazy"
               />
               <img
                 src="https://images.unsplash.com/photo-1611377247946-ae36f1d725f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                 alt="Top down view of walnut card tray with embedded magnets and card groove."
-                className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                className="hidden md:block rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
                 loading="lazy"
               />
               <img

@@ -3,6 +3,7 @@ import AppLayout from "../components/Layout/AppLayout";
 import MiniCard from "../components/utils/MiniCard";
 import { MdPhonelinkRing } from "react-icons/md";
 import Small from "../components/utils/Small";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -104,7 +105,20 @@ const Contact = () => {
                       htmlFor="remember-me"
                       className="ml-2 text-sm font-medium capitalize"
                     >
-                      I agree with privacy policy and terms & conditions.
+                      I agree with
+                      <Link
+                        to="/privacy-policy"
+                        className="text-custom-purple-500 hover:text-white transition"
+                      >
+                        privacy policy
+                      </Link>
+                      and
+                      <Link
+                        to="/terms-conditions"
+                        className="text-custom-purple-500 hover:text-white transition"
+                      >
+                        terms & conditions.
+                      </Link>
                     </label>
                   </div>
                 </div>

@@ -226,13 +226,13 @@ const Home = () => {
               <img
                 src="https://images.unsplash.com/photo-1584715642530-3cb85fc36539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                 alt="Side of walnut card tray with card groove and recessed card area."
-                className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                className="hidden md:block rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
                 loading="lazy"
               />
               <img
                 src="https://images.unsplash.com/photo-1627768919962-fb6af351759c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=680&q=80"
                 alt="Walnut card tray filled with cards and card angled in dedicated groove."
-                className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
+                className="hidden md:block rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
                 loading="lazy"
               />
             </div>
