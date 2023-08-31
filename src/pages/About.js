@@ -64,12 +64,6 @@ const About = () => {
           <div className="max-w-[1280px] mx-auto text-center">
             <div className="flex flex-wrap md:justify-evenly my-24">
               <div className="w-full max-w-sm text-center mb-6 p-4 bg-[#293041]/80 border border-[#434959] rounded-xl">
-                {/* <img
-                  loading="lazy"
-                  src="https://scatec.com/wp-content/uploads/sites/7/2020/03/Human-rights_Scatec-Solar-676x410.jpg"
-                  alt="happy african labors"
-                  className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-                /> */}
                 <h1 className="font-bold text-xl capitalize mb-2 text-gray-100">
                   Our Vision
                 </h1>
@@ -81,12 +75,6 @@ const About = () => {
               </div>
 
               <div className="w-full max-w-sm text-center mb-6 p-6 bg-[#293041]/80  border border-[#434959] rounded-xl">
-                {/* <img
-                  loading="lazy"
-                  src="https://scatec.com/wp-content/uploads/sites/7/2020/03/Human-rights_Scatec-Solar-676x410.jpg"
-                  alt="happy african labors"
-                  className="rounded-full w-32 h-32 object-cover mx-auto mb-4"
-                /> */}
                 <h1 className="font-bold text-xl capitalize mb-2 text-gray-100">
                   Our Mission
                 </h1>
@@ -190,8 +178,8 @@ const About = () => {
           <h1 className="font-bold text-2xl text-gray-200 text-center capitalize">
             meet our dedicated professionals
           </h1>
-          <div className="flex flex-wrap py-20">
-            <div className="w-1/2 md:w-[23%] text-center mb-6">
+          <div className="flex flex-wrap justify-items-center items-center py-20">
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
               <img
                 src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
                 alt="happy african labors"
@@ -201,9 +189,11 @@ const About = () => {
               <h1 className="font-bold text-lg capitalize text-gray-200">
                 Jhon Doe
               </h1>
-              <p className="text-gray-500 text-sm italic px-4">ceo</p>
+              <p className="text-gray-500 text-sm italic px-4">
+                Network manager
+              </p>
             </div>
-            <div className="w-1/2 md:w-[23%] text-center mb-6">
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
               <img
                 src="https://img.freepik.com/premium-photo/black-woman-portrait-face-isolated-gray-background-profile-ambition-vision-confident-african-american-female-person-lady-model-looking-with-smile-career-job-hair-style_590464-154640.jpg"
                 alt="happy african labors"
@@ -215,7 +205,19 @@ const About = () => {
               </h1>
               <p className="text-gray-500 text-sm italic px-4">ceo</p>
             </div>
-            <div className="w-1/2 md:w-[23%] text-center mb-6">
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
+              <img
+                src="https://img.freepik.com/premium-photo/black-woman-portrait-face-isolated-gray-background-profile-ambition-vision-confident-african-american-female-person-lady-model-looking-with-smile-career-job-hair-style_590464-154640.jpg"
+                alt="happy african labors"
+                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
+                loading="lazy"
+              />
+              <h1 className="font-bold text-lg capitalize text-gray-200">
+                Emily Stwert
+              </h1>
+              <p className="text-gray-500 text-sm italic px-4">accountant</p>
+            </div>
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
               <img
                 src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
                 alt="happy african labors"
@@ -227,7 +229,31 @@ const About = () => {
               </h1>
               <p className="text-gray-500 text-sm italic px-4">ceo</p>
             </div>
-            <div className="w-1/2 md:w-[23%] text-center mb-6">
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+                alt="happy african labors"
+                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
+                loading="lazy"
+              />
+              <h1 className="font-bold text-lg capitalize text-gray-200">
+                Jhon Doe
+              </h1>
+              <p className="text-gray-500 text-sm italic px-4">ceo</p>
+            </div>
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_88Pw6jbIKvC5Ef_BUmtFvNA8mCSUkGEg6w&usqp=CAU"
+                alt="happy african labors"
+                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
+                loading="lazy"
+              />
+              <h1 className="font-bold text-lg capitalize text-gray-200">
+                Jhon Becky
+              </h1>
+              <p className="text-gray-500 text-sm italic px-4">miner</p>
+            </div>
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_88Pw6jbIKvC5Ef_BUmtFvNA8mCSUkGEg6w&usqp=CAU"
                 alt="happy african labors"
@@ -238,6 +264,20 @@ const About = () => {
                 Jhon Becky
               </h1>
               <p className="text-gray-500 text-sm italic px-4">ceo</p>
+            </div>
+            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_88Pw6jbIKvC5Ef_BUmtFvNA8mCSUkGEg6w&usqp=CAU"
+                alt="happy african labors"
+                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
+                loading="lazy"
+              />
+              <h1 className="font-bold text-lg capitalize text-gray-200">
+                Jhon Becky
+              </h1>
+              <p className="text-gray-500 text-sm italic px-4">
+                communication officer
+              </p>
             </div>
           </div>
         </section>

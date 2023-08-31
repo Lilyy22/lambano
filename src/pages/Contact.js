@@ -105,17 +105,17 @@ const Contact = () => {
                       htmlFor="remember-me"
                       className="ml-2 text-sm font-medium capitalize"
                     >
-                      I agree with
+                      I agree with&nbsp;
                       <Link
                         to="/privacy-policy"
-                        className="text-custom-purple-500 hover:text-white transition"
+                        className="text-gray-400 hover:text-gray-200 transition"
                       >
-                        privacy policy
+                        privacy policy&nbsp;
                       </Link>
-                      and
+                      and&nbsp;
                       <Link
                         to="/terms-conditions"
-                        className="text-custom-purple-500 hover:text-white transition"
+                        className="text-gray-400 hover:text-gray-200 transition"
                       >
                         terms & conditions.
                       </Link>

@@ -17,23 +17,10 @@ const Terms = () => {
                 <ul className="pl-4 border-l-2 border-gray-800 text-gray-600">
                   <li className="box-border mb-2">
                     <a
-                      href="#autocoll"
+                      href="#section2"
                       className={
                         "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#autocoll"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Accounts and membership
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#personalinfo"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#personalinfo"
+                        (window.location.hash === "#section2"
                           ? "text-gray-400"
                           : "")
                       }
@@ -44,71 +31,116 @@ const Terms = () => {
                   <li className="box-border mb-2">
                     <a
                       href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section3"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Prohibited uses
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section4"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section4"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Intellectual property rights
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section5"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section5"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Limitation of liability
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section6"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section6"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Indemnification
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section7"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section7"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Severability
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section8"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section8"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Dispute resolution
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section9"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section9"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Changes and amendments
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section10"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section10"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Acceptance of these terms
                     </a>
                   </li>
                   <li className="box-border mb-2">
                     <a
-                      href="#section3"
-                      className="table-of-contents-link text-sm hover:text-gray-400"
+                      href="#section11"
+                      className={
+                        "table-of-contents-link hover:text-gray-400 " +
+                        (window.location.hash === "#section11"
+                          ? "text-gray-400"
+                          : "")
+                      }
                     >
                       Contacting us
                     </a>
@@ -145,7 +177,9 @@ const Terms = () => {
                 your use of the Website and Services.
               </p>
 
-              <h3 className="font-bold">Accounts and membership</h3>
+              <h3 className="font-bold" id="section1">
+                Accounts and membership
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 If you create an account on the Website, you are responsible for
@@ -168,7 +202,9 @@ const Terms = () => {
                 protocol address to prevent further registration.
               </p>
 
-              <h3 className="font-bold">Links to other resources</h3>
+              <h3 className="font-bold" id="section2">
+                Links to other resources
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 Although the Website and Services may link to other resources
@@ -186,7 +222,9 @@ const Terms = () => {
                 off-site resources is at your own risk.
               </p>
 
-              <h3 className="font-bold">Prohibited uses</h3>
+              <h3 className="font-bold" id="section3">
+                Prohibited uses
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 In addition to other terms as set forth in the Agreement, you
@@ -212,7 +250,9 @@ const Terms = () => {
                 violating any of the prohibited uses.
               </p>
 
-              <h3 className="font-bold">Intellectual property rights</h3>
+              <h3 className="font-bold" id="section4">
+                Intellectual property rights
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 &ldquo;Intellectual Property Rights&rdquo; means all present and
@@ -240,7 +280,9 @@ const Terms = () => {
                 Metals PLC or third party trademarks.
               </p>
 
-              <h3 className="font-bold">Limitation of liability</h3>
+              <h3 className="font-bold" id="section5">
+                Limitation of liability
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 To the fullest extent permitted by applicable law, in no event
@@ -266,7 +308,9 @@ const Terms = () => {
                 you for any losses or fails of its essential purpose.
               </p>
 
-              <h3 className="font-bold">Indemnification</h3>
+              <h3 className="font-bold" id="section6">
+                Indemnification
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 You agree to indemnify and hold Lambano Metals PLC and its
@@ -280,7 +324,9 @@ const Terms = () => {
                 on your part.
               </p>
 
-              <h3 className="font-bold">Severability</h3>
+              <h3 className="font-bold" id="section7">
+                Severability
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 All rights and restrictions contained in this Agreement may be
@@ -297,7 +343,9 @@ const Terms = () => {
                 in full force and effect.
               </p>
 
-              <h3 className="font-bold">Dispute resolution</h3>
+              <h3 className="font-bold" id="section8">
+                Dispute resolution
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 The formation, interpretation, and performance of this Agreement
@@ -314,7 +362,9 @@ const Terms = () => {
                 Agreement.
               </p>
 
-              <h3 className="font-bold">Changes and amendments</h3>
+              <h3 className="font-bold" id="section9">
+                Changes and amendments
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 We reserve the right to modify this Agreement or its terms
@@ -334,7 +384,9 @@ const Terms = () => {
                 consent to those changes.
               </p>
 
-              <h3 className="font-bold">Acceptance of these terms</h3>
+              <h3 className="font-bold" id="section10">
+                Acceptance of these terms
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 You acknowledge that you have read this Agreement and agree to
@@ -346,7 +398,9 @@ const Terms = () => {
                 https://www.websitepolicies.com/terms-and-conditions-generator
               </p>
 
-              <h3 className="font-bold">Contacting us</h3>
+              <h3 className="font-bold" id="section11">
+                Contacting us
+              </h3>
 
               <p className="text-base my-10 text-gray-500">
                 If you have any questions, concerns, or complaints regarding

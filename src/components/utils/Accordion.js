@@ -7,7 +7,7 @@ export const Accordion = ({ question, content }) => {
   return (
     <>
       <button
-        className="w-full bg-[#293041]/80 rounded-md my-1 py-3 px-3 text-left text-lg border border-gray-800 text-slate-900"
+        className="w-full bg-[#293041]/80 rounded-xl my-1 py-3 px-3 text-left text-lg border border-gray-800 text-slate-900"
         onClick={() => {
           setIsActive(!isActive);
         }}
