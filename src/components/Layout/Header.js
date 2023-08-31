@@ -59,13 +59,8 @@ const Header = () => {
                 </li>
                 <li className="">
                   <NavLink
-                    to="/service"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "active text-white"
-                        : " " +
-                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
-                    }
+                    to="/#sectionservice"
+                    className="text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
                   >
                     Service
                   </NavLink>

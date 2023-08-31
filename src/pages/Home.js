@@ -240,7 +240,16 @@ const Home = () => {
         </section>
 
         {/* services */}
-        <section class="flex flex-col justify-center antialiased bg-custom-dark-500 text-gray-200 min-h-screen">
+        <section
+          class="flex flex-col justify-center antialiased bg-custom-dark-500 text-gray-200 min-h-screen"
+          id="sectionservice"
+        >
+          <div className="text-center py-12">
+            <Small text="Our services" />
+            <h2 className="text-2xl font-bold tracking-tight text-gray-300 sm:text-4xl">
+              We help you mine
+            </h2>
+          </div>
           <div class="max-w-6xl mx-auto p-4 sm:px-6 h-full">
             <SplitLayout
               category="services"
@@ -332,7 +341,7 @@ the mining work."
                 From the blog
               </h2>
               <p className="mt-2 text-lg leading-8 text-gray-600">
-                Learn how to grow your business with our expert advice.
+                Learn about mining and minerals.
               </p>
             </div>
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none md:grid-cols-2 lg:grid-cols-3">
