@@ -21,8 +21,8 @@ const Home = () => {
               <div className="md:w-1/2 my-auto md:pr-4 py-24">
                 <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200">
                   Premier Destination for
-                  <span className="text-amber-200"> Minerals </span>
-                  and <span className="text-amber-200"> Mining </span>
+                  <span className="text-[#c8956e]"> Minerals </span>
+                  and <span className="text-[#c8956e]"> Mining </span>
                   Expertise.
                 </h1>
                 <p className="text-gray-500 py-4 lg:py-6 max-w-lg">
