@@ -15,26 +15,34 @@ const Home = () => {
   return (
     <>
       <AppLayout>
-        <section
-          className="py-24 bg-cover bg-blend-overlay bg-custom-dark-500"
-          // style={{ backgroundImage: `url(${require("../assets/bg2.jpg")})` }}
-        >
+        <section className=" bg-custom-dark-500/80">
           <div className="max-w-[1280px] mx-2 md:mx-auto">
             <div className="flex flex-wrap justify-between">
-              <div className="md:w-1/2 my-auto md:pr-4">
+              <div className="md:w-1/2 my-auto md:pr-4 py-24">
                 <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200">
-                  Unleashing Nature's Riches for Sustainable Success.
+                  Premier Destination for
+                  <span className="text-amber-200"> Minerals </span>
+                  and <span className="text-amber-200"> Mining </span>
+                  Expertise.
                 </h1>
                 <p className="text-gray-500 py-4 lg:py-6 max-w-lg">
-                  Embracing the Earth's Treasures: Your Premier Destination for
-                  Dependable Mineral Supply and Unparalleled Mining Expertise,
-                  Enabling Sustainable Growth and Success.
+                  Embracing the Earth's Treasures: Unleashing Nature's Riches
+                  for Sustainable Success. Enabling Sustainable Growth and
+                  Success.
                 </p>
                 <div className="flex gap-4">
                   <SolidButton text="Get in touch" goto="/contact" />
                   <OutlineButton text="Learn More" goto="/service" />
                 </div>
               </div>
+              {/* <div className="w-1/2 my-auto border-4 border-transparent bg-repeat-round">
+                <img
+                  className="w-96 object-cover brightness-75 contrast-100"
+                  src={require("../assets/maybe.png")}
+                  alt="About Lambano"
+                  loading="lazy"
+                />
+              </div> */}
               <div className="md:w-1/2 my-auto md:pr-4">
                 <div className="relative block group " href="#0">
                   <div
@@ -44,7 +52,7 @@ const Home = () => {
                   <figure className="relative h-0 pb-[56.25%] md:pb-[75%] lg:pb-[56.25%] overflow-hidden transform md:-translate-y-2 xl:-translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out">
                     <img
                       className="rounded-xl absolute inset-0 w-full h-full object-cover brightness-75 contrast-100 transform hover:scale-105 transition duration-700 ease-out"
-                      src="https://img.freepik.com/free-photo/heavy-excavator-digging-day-light_23-2149194832.jpg?w=1060&t=st=1693209706~exp=1693210306~hmac=182a3f2e2b2e445e7f82d51ed4f7d627d3909068380504088020d1e632e4d0d6"
+                      src="https://img.freepik.com/free-photo/piece-gold-table_91008-586.jpg?w=1380&t=st=1693904288~exp=1693904888~hmac=2030fc4d52ea2204197833023d9dc373f83bb9f09ff152b38689202076136e06"
                       width="540"
                       height="303"
                       alt="About Lambano"
@@ -241,7 +249,7 @@ const Home = () => {
 
         {/* services */}
         <section
-          class="flex flex-col justify-center antialiased bg-custom-dark-500 text-gray-200 min-h-screen"
+          className="flex flex-col justify-center antialiased bg-custom-dark-500 text-gray-200 min-h-screen"
           id="sectionservice"
         >
           <div className="text-center py-12">
@@ -250,7 +258,7 @@ const Home = () => {
               We help you mine
             </h2>
           </div>
-          <div class="max-w-6xl mx-auto p-4 sm:px-6 h-full">
+          <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
             <SplitLayout
               category="services"
               title="Developing mining projects"

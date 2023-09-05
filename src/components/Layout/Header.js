@@ -1,36 +1,46 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, NavNavLink } from "react-router-dom";
+import { Link, NavLink, NavNavLink } from "react-router-dom";
 import { SolidButton } from "../utils/Button";
 
 const Header = () => {
-  const [menuToggle, setMenuToggle] = useState();
+  const [menuToggle, setMenuToggle] = useState(false);
   return (
     <>
       <header className="bg-custom-dark-500 sticky top-0 w-full z-50 transition-all delay-100 ease-in py-2 md:py-4 border-b border-gray-800">
-        <div className="max-w-[1280px] mx-auto">
+        <div className="max-w-[1280px] mx-auto px-4 relative">
           <div className="flex justify-between items-center w-full relative">
-            <div className="my-auto font-bold text-xl text-gray-300">
+            <Link to="/" className="my-auto font-bold text-xl text-gray-300">
+              <img
+                src={require("../../assets/logo.png")}
+                className="w-6 mr-2 inline-block text"
+                alt="logo"
+              />
               LambanoMetals
-            </div>
+            </Link>
 
             <div className="md:hidden">
               <button
                 className="py-3 m-auto z-20"
                 onClick={() => setMenuToggle(!menuToggle)}
               >
-                {/* <HiMenu size={30} className="text-gray-900" /> */}
+                <div size={30} className="text-gray-400">
+                  n
+                </div>
               </button>
             </div>
 
-            <nav className={`hidden md:flex font-bold`}>
-              {/* <nav
-              className={
+            <nav
+              className={`hidden md:flex font-bold bg-none static ${
                 menuToggle
-                  ? "rounded lg:rounded-none absolute lg:static top-[66px] left-0 p-4 marker:w-full lg:w-auto border lg:border-none shadow-md lg:shadow-none"
-                  : "hidden lg:flex my-auto"
-              }
-            > */}
-              <ul className="flex gap-6 text-gray-300 my-auto">
+                  ? " w-full block absolute top-16 z-50 p-6 bg-gray-400"
+                  : ""
+              }`}
+            >
+              <ul
+                className={`flex gap-6 text-gray-300 my-auto ${
+                  menuToggle ? "flex-none md:flex" : ""
+                }`}
+              >
                 <li className="">
                   <NavLink
                     to="/"
