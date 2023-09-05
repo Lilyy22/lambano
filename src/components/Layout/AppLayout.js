@@ -16,7 +16,7 @@ const AppLayout = ({ children }) => {
         <div className="relative">
           <Link
             to=""
-            className="bg-gray-100 border-gray-800 rounded-xl fixed p-2 md:px-6 md:py-4 bottom-5 right-5 w-72 z-50"
+            className="bg-gray-200 border-gray-800 rounded-xl fixed p-2 md:px-6 md:py-4 bottom-5 right-5 w-72 z-50"
           >
             <span
               className="float-right transition-all"
@@ -29,7 +29,7 @@ const AppLayout = ({ children }) => {
             <div className="flex">
               <RiWhatsappFill
                 size={30}
-                className="text-custom-purple-500 mr-2"
+                className="text-custom-purple-500 mr-2 animate-bounce"
               />
               <h4 className="font-bold text-lg capitalize">Chat on whatsapp</h4>
             </div>

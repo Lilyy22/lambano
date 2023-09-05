@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink, NavNavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { SolidButton } from "../utils/Button";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
+  console.log(menuToggle);
   return (
     <>
       <header className="bg-custom-dark-500 sticky top-0 w-full z-50 transition-all delay-100 ease-in py-2 md:py-4 border-b border-gray-800">
@@ -12,7 +14,7 @@ const Header = () => {
             <Link to="/" className="my-auto font-bold text-xl text-gray-300">
               <img
                 src={require("../../assets/logo.png")}
-                className="w-6 mr-2 inline-block text"
+                className="w-5 md:w-6 mr-2 inline-block text my-auto"
                 alt="logo"
               />
               LambanoMetals
@@ -24,21 +26,25 @@ const Header = () => {
                 onClick={() => setMenuToggle(!menuToggle)}
               >
                 <div size={30} className="text-gray-400">
-                  n
+                  {menuToggle ? (
+                    <FiX className="w-5 h-7 transition-all delay-150" />
+                  ) : (
+                    <FiMenu className="w-5 h-7 transition-all delay-150" />
+                  )}
                 </div>
               </button>
             </div>
 
             <nav
-              className={`hidden md:flex font-bold bg-none static ${
+              className={`md:p-0 md:w-fit md:flex font-bold bg-gray-100 md:bg-transparent md:static ${
                 menuToggle
-                  ? " w-full block absolute top-16 z-50 p-6 bg-gray-400"
-                  : ""
+                  ? "w-full block absolute top-16 z-50 p-4 rounded-lg"
+                  : "hidden rounded-none"
               }`}
             >
               <ul
-                className={`flex gap-6 text-gray-300 my-auto ${
-                  menuToggle ? "flex-none md:flex" : ""
+                className={`gap-6 text-gray-300 my-auto ${
+                  menuToggle ? "flex-none md:flex" : "md:flex"
                 }`}
               >
                 <li className="">
@@ -46,9 +52,9 @@ const Header = () => {
                     to="/"
                     className={({ isActive }) =>
                       isActive
-                        ? "active text-white"
+                        ? "md:text-white text-custom-purple-500 block border-b md:border-none transition ease-in-out delay-150 mb-2"
                         : " " +
-                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
+                          " text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-2 border-b md:border-none transition ease-in-out delay-150 mb-2 md:mb-0"
                     }
                   >
                     Home
@@ -59,9 +65,9 @@ const Header = () => {
                     to="/about"
                     className={({ isActive }) =>
                       isActive
-                        ? "active text-white"
+                        ? "md:text-white text-custom-purple-500 block border-b md:border-none transition ease-in-out delay-150 mb-2"
                         : " " +
-                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
+                          " text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-2 border-b md:border-none md:mb-0"
                     }
                   >
                     About
@@ -70,7 +76,7 @@ const Header = () => {
                 <li className="">
                   <NavLink
                     to="/#sectionservice"
-                    className="text-[#6d727e] block transition ease-in-out delay-150 hover:text-white"
+                    className="text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-2 border-b md:border-none md:mb-0"
                   >
                     Service
                   </NavLink>
@@ -80,9 +86,9 @@ const Header = () => {
                     to="/sustainablity"
                     className={({ isActive }) =>
                       isActive
-                        ? "active text-white mr-6"
+                        ? "text-white mr-6"
                         : " " +
-                          " text-[#6d727e] block transition ease-in-out delay-150 hover:text-white mr-6"
+                          " text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-4 border-b md:border-none md:mb-0 mr-6"
                     }
                   >
                     Sustainability

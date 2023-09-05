@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="text-custom-purple-500">
             <img
               src={require("../../assets/logo.png")}
-              className="w-16 inline-block"
+              className="w-10 lg:w-16 inline-block"
               alt="logo"
             />
           </div>
@@ -36,7 +36,7 @@ const Footer = () => {
                     type="email"
                     id="UserEmail"
                     placeholder="example@example.com"
-                    className="w-full border-none p-3 focus:border-transparent focus:ring-transparent sm:text-sm rounded-lg bg-gray-800"
+                    className="mb-2 w-full border-none p-3 focus:border-transparent focus:ring-transparent sm:text-sm rounded-lg bg-gray-800"
                   />
                   <SolidButton text="Subscribe" />
                 </div>
