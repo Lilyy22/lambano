@@ -1,6 +1,7 @@
 import React from "react";
 import AppLayout from "../components/Layout/AppLayout";
 import { Link } from "react-router-dom";
+import TblContentSideBar from "../components/common/TblContentSideBar";
 
 const Terms = () => {
   return (
@@ -15,144 +16,42 @@ const Terms = () => {
                   Terms & Conditions
                 </h2>
                 <ul className="pl-4 border-l-2 border-gray-800 text-gray-600">
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section2"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section2"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Links to other resources
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section3"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section3"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Prohibited uses
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section4"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section4"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Intellectual property rights
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section5"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section5"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Limitation of liability
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section6"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section6"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Indemnification
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section7"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section7"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Severability
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section8"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section8"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Dispute resolution
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section9"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section9"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Changes and amendments
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section10"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section10"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Acceptance of these terms
-                    </a>
-                  </li>
-                  <li className="box-border mb-2">
-                    <a
-                      href="#section11"
-                      className={
-                        "table-of-contents-link hover:text-gray-400 " +
-                        (window.location.hash === "#section11"
-                          ? "text-gray-400"
-                          : "")
-                      }
-                    >
-                      Contacting us
-                    </a>
-                  </li>
+                  <TblContentSideBar
+                    title="Links to other resources"
+                    link="#section1"
+                  />
+                  <TblContentSideBar title="Prohibited uses" link="#section2" />
+                  <TblContentSideBar
+                    title="Intellectual property rights"
+                    link="#section3"
+                  />
+                  <TblContentSideBar
+                    title="Limitation of liability"
+                    link="#section4"
+                  />
+                  <TblContentSideBar title="Indemnification" link="#section5" />
+                  <TblContentSideBar title="Severability" link="#section6" />
+                  <TblContentSideBar
+                    title="Dispute resolution"
+                    link="#section7"
+                  />
+                  <TblContentSideBar
+                    title="Changes and amendments"
+                    link="#section8"
+                  />
+                  <TblContentSideBar
+                    title="Acceptance of these terms"
+                    link="#section9"
+                  />
+                  <TblContentSideBar title="Contacting us" link="#section10" />
                 </ul>
               </nav>
             </div>
 
-            <div className="w-full md:flex-1 text-base mx-2">
+            <div className="w-full md:flex-1 text-base px-2">
               <h1 className="font-bold text-3xl">Terms & Conditions</h1>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 These terms and conditions (&ldquo;Agreement&rdquo;) set forth
                 the general terms and conditions of your use of the
                 lambanometals.com website (&ldquo;Website&rdquo; or
@@ -181,7 +80,7 @@ const Terms = () => {
                 Accounts and membership
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 If you create an account on the Website, you are responsible for
                 maintaining the security of your account and you are fully
                 responsible for all activities that occur under the account and
@@ -206,7 +105,7 @@ const Terms = () => {
                 Links to other resources
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 Although the Website and Services may link to other resources
                 (such as websites, mobile applications, etc.), we are not,
                 directly or indirectly, implying any approval, association,
@@ -226,7 +125,7 @@ const Terms = () => {
                 Prohibited uses
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 In addition to other terms as set forth in the Agreement, you
                 are prohibited from using the Website and Services or Content:
                 (a) for any unlawful purpose; (b) to solicit others to perform
@@ -254,7 +153,7 @@ const Terms = () => {
                 Intellectual property rights
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 &ldquo;Intellectual Property Rights&rdquo; means all present and
                 future rights conferred by statute, common law or equity in or
                 in relation to any copyright and related rights, trademarks,
@@ -284,7 +183,7 @@ const Terms = () => {
                 Limitation of liability
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 To the fullest extent permitted by applicable law, in no event
                 will Lambano Metals PLC, its affiliates, directors, officers,
                 employees, agents, suppliers or licensors be liable to any
@@ -312,7 +211,7 @@ const Terms = () => {
                 Indemnification
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 You agree to indemnify and hold Lambano Metals PLC and its
                 affiliates, directors, officers, employees, agents, suppliers
                 and licensors harmless from and against any liabilities, losses,
@@ -328,7 +227,7 @@ const Terms = () => {
                 Severability
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 All rights and restrictions contained in this Agreement may be
                 exercised and shall be applicable and binding only to the extent
                 that they do not violate any applicable laws and are intended to
@@ -347,7 +246,7 @@ const Terms = () => {
                 Dispute resolution
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 The formation, interpretation, and performance of this Agreement
                 and any disputes arising out of it shall be governed by the
                 substantive and procedural laws of Ethiopia without regard to
@@ -366,7 +265,7 @@ const Terms = () => {
                 Changes and amendments
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 We reserve the right to modify this Agreement or its terms
                 related to the Website and Services at any time at our
                 discretion. When we do, we will revise the updated date at the
@@ -375,7 +274,7 @@ const Terms = () => {
                 you have provided.
               </p>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 An updated version of this Agreement will be effective
                 immediately upon the posting of the revised Agreement unless
                 otherwise specified. Your continued use of the Website and
@@ -388,7 +287,7 @@ const Terms = () => {
                 Acceptance of these terms
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 You acknowledge that you have read this Agreement and agree to
                 all its terms and conditions. By accessing and using the Website
                 and Services you agree to be bound by this Agreement. If you do
@@ -402,7 +301,7 @@ const Terms = () => {
                 Contacting us
               </h3>
 
-              <p className="text-base my-10 text-gray-500">
+              <p className="text-sm text-justify my-10 text-gray-500 lg:text-base">
                 If you have any questions, concerns, or complaints regarding
                 this Agreement, we encourage you to contact us using the details
                 below:

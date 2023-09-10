@@ -142,6 +142,7 @@ const About = () => {
                     we thrive to bring about the change we foresee.
                   </p>
                 </div>
+                <SolidButton text="Get in touch" goto="/contact" />
               </div>
             </div>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">

@@ -54,7 +54,7 @@ const Header = () => {
                       isActive
                         ? "md:text-white text-custom-purple-500 block border-b md:border-none transition ease-in-out delay-150 mb-2"
                         : " " +
-                          " text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-2 border-b md:border-none transition ease-in-out delay-150 mb-2 md:mb-0"
+                          " text-[#6d727e] block md:hover:text-white hover:text-custom-purple-500 border-b md:border-none transition ease-in-out delay-150 mb-2 md:mb-0"
                     }
                   >
                     Home
