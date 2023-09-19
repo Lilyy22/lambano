@@ -20,7 +20,7 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/sustainablity" element={<Sustainablity />} />
         <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="/terms-conditions" element={<Terms />} />
+        <Route path="/terms-and-conditions" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import AppLayout from "../components/Layout/AppLayout";
 import BlogCard from "../components/utils/BlogCard";
 import SplitLayout from "../components/utils/SplitLayout";
@@ -7,11 +7,28 @@ import { Accordion } from "../components/utils/Accordion";
 import { blogdata, faqData } from "../data/data";
 import Small from "../components/utils/Small";
 import { OutlineButton, SolidButton } from "../components/utils/Button";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
-  const bgurl =
-    "https://img.freepik.com/free-vector/abstract-red-circle-black-background-technology_1142-9839.jpg?w=1060&t=st=1693038691~exp=1693039291~hmac=a04c9dc6cf115d6ecc679c35742a6f1964f3463e621db12f13d370a2b594266d";
+  const location = useLocation();
+  const section1 = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+  const section4 = useRef(null);
 
+  useEffect(() => {
+    if (location.hash) {
+      if (section1.current && location.hash === "#section1") {
+        section1.current.scrollIntoView({ behavior: "smooth" });
+      } else if (section2.current && location.hash === "#section2") {
+        section2.current.scrollIntoView({ behavior: "smooth" });
+      } else if (section3.current && location.hash === "#section3") {
+        section3.current.scrollIntoView({ behavior: "smooth" });
+      } else if (section4.current && location.hash === "#section4") {
+        section4.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <AppLayout>
@@ -55,7 +72,7 @@ const Home = () => {
                       src="https://img.freepik.com/free-photo/piece-gold-table_91008-586.jpg?w=1380&t=st=1693904288~exp=1693904888~hmac=2030fc4d52ea2204197833023d9dc373f83bb9f09ff152b38689202076136e06"
                       width="540"
                       height="303"
-                      alt="About Lambano"
+                      alt="Mineral image"
                       loading="lazy"
                     />
                   </figure>
@@ -65,7 +82,7 @@ const Home = () => {
           </div>
 
           {/* Items */}
-          <div className="pt-20 md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-5">
+          <div className="py-16 md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-5">
             {/* Item */}
             <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
               <svg
@@ -133,7 +150,7 @@ const Home = () => {
           </div>
         </section>
 
-        <div className="text-center pt-28 pb-16 text-gray-200 mx-auto border-t border-gray-800">
+        <div className="text-center py-16 text-gray-200 mx-auto border-t border-gray-800">
           <Small text="who we are" />
           <h1 className="font-bold text-3xl">Lambano Metals</h1>
           <p className="max-w-lg mx-auto my-4 text-gray-500">
@@ -145,7 +162,7 @@ const Home = () => {
         </div>
 
         {/* minerals */}
-        <section className="bg-custom-white-500">
+        <section id="section4" ref={section4} className="bg-custom-white-500">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
             <div>
               <div>
@@ -249,8 +266,9 @@ const Home = () => {
 
         {/* services */}
         <section
+          id="section1"
+          ref={section1}
           className="flex flex-col justify-center antialiased bg-custom-dark-500 text-gray-200 min-h-screen"
-          id="sectionservice"
         >
           <div className="text-center py-12">
             <Small text="Our services" />
@@ -263,9 +281,9 @@ const Home = () => {
               category="services"
               title="Developing mining projects"
               body="we have selected rich deposits
-for small and large scale mining projects. These mining project developments
-are in various stages and we are open and ready to collaborate with both
-domestic and international firms to work together."
+              for small and large scale mining projects. These mining project developments
+              are in various stages and we are open and ready to collaborate with both
+              domestic and international firms to work together."
               img="https://img.freepik.com/free-photo/large-truck-carrying-sand-platinum-mining-site-africa_181624-60189.jpg?t=st=1693057019~exp=1693057619~hmac=ea495a719ea37f5d6d68ee757e0b9ecdeac292131d4b529f005c314c87c576bd"
             />
             <SplitLayout
@@ -273,28 +291,32 @@ domestic and international firms to work together."
               order=" md:order-last"
               title="Consulting Service"
               body="We understand that many firms are showing interest to enter the mining
-sector of Ethiopia. And we know there is a lot of research and guidance
-needed for the new entries."
+              sector of Ethiopia. And we know there is a lot of research and guidance
+              needed for the new entries."
               img="https://img.freepik.com/free-photo/three-people-discussing-plan-factory_1303-30624.jpg?w=1060&t=st=1693057151~exp=1693057751~hmac=0824bb5b65d9e2a7afd45ecffeecfffafc6f2aa529c57cc61d9aa28fb417435e"
             />
             <SplitLayout
               category="services"
               title="Supplying Machinery and Technologies"
               body="Our major motivation is empowering artesian and small scale miners. We
-provide a variety of equipment, machinery and technologies that mechanize
-the mining work."
+              provide a variety of equipment, machinery and technologies that mechanize
+              the mining work."
               img="https://img.freepik.com/free-photo/close-up-construction-site-excavator_1112-1223.jpg?size=626&ext=jpg&ga=GA1.2.471747871.1692955696&semt=ais"
             />
           </div>
         </section>
 
-        <section className="py-20 font-tailwind bg-custom-white-500">
+        <section
+          id="section2"
+          ref={section2}
+          className="py-20 font-tailwind bg-custom-white-500"
+        >
           <div className="max-w-[1280px] mx-auto text-center">
             <Small text="we care about" />
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mt-2">
               Sustainability
             </h2>
-            <div className="flex flex-wrap md:justify-evenly my-24">
+            <div className="flex flex-wrap md:justify-between my-24">
               <MediaCard
                 title="Environment management"
                 body="we approach our environment with care and attention."
@@ -307,8 +329,8 @@ the mining work."
               />
               <MediaCard
                 title="Human rights"
-                body="We do everything we can under the law to protect our workforce
-                from any human rights violations."
+                body="We do everything under the law to protect our workforce
+                from human rights violations."
                 img="https://www.amnesty.org.uk/files/styles/poster/s3/2020-04/269218_%282%29.jpg?VersionId=5qqjobVSTI67CwDLG_gDbEOvq2Nw6QFV&itok=e-_6vTMh"
               />
               <MediaCard
@@ -334,7 +356,7 @@ the mining work."
             <img
               loading="lazy"
               src={require("../assets/map.png")}
-              className="w-full md:w-[60%] mx-auto my-20"
+              className="w-full md:w-[60%] lg:w-1/2 mx-auto my-20"
             />
           </div>
         </section>
@@ -382,7 +404,11 @@ the mining work."
           </div>
         </section>
 
-        <div className="md:mx-20 lg:w-[70%] lg:mx-auto py-24 text-center">
+        <div
+          id="section3"
+          ref={section3}
+          className="md:mx-20 lg:w-[70%] lg:mx-auto py-24 text-center"
+        >
           <Small text="Find out more" />
           <h1 className="font-bold text-3xl capitalize mb-12 text-gray-200">
             Frequently Asked Questions

@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import TblContentSideBar from "../components/common/TblContentSideBar";
 
 const Privacy = () => {
+  const handleRedirect = (link) => {
+    // Update window location using window.location.href
+    window.location.hash = link;
+    console.log(link);
+    // Alternatively, you can use window.location.assign()
+    // window.location.assign('https://www.example.com');
+  };
   return (
     <>
       <AppLayout>
@@ -109,26 +116,36 @@ const Privacy = () => {
                 practices of companies that we do not own or control, or to
                 individuals that we do not employ or manage.
               </p>
-              <h3 className="font-bold" id="section1">
-                Automatic collection of information
-              </h3>
-              <p className="my-10 text-gray-500 text-justify text-sm lg:text-base">
-                When you open the Website, our servers automatically record
-                information that your browser sends. This data may include
-                information such as your device’s IP address, browser type, and
-                version, operating system type and version, language preferences
-                or the webpage you were visiting before you came to the Website
-                and Services, pages of the Website and Services that you visit,
-                the time spent on those pages, information you search for on the
-                Website, access times and dates, and other statistics.
-              </p>
-              <p className="my-10 text-gray-500 text-justify text-sm lg:text-base">
-                Information collected automatically is used only to identify
-                potential cases of abuse and establish statistical information
-                regarding the usage and traffic of the Website and Services.
-                This statistical information is not otherwise aggregated in such
-                a way that would identify any particular User of the system.
-              </p>
+              <div
+                id="section1"
+                onFocus={() => {
+                  handleRedirect("#section1");
+                }}
+              >
+                <h3 className="font-bold">
+                  Automatic collection of information
+                </h3>
+                <p className="my-10 text-gray-500 text-justify text-sm lg:text-base">
+                  When you open the Website, our servers automatically record
+                  information that your browser sends. This data may include
+                  information such as your device’s IP address, browser type,
+                  and version, operating system type and version, language
+                  preferences or the webpage you were visiting before you came
+                  to the Website and Services, pages of the Website and Services
+                  that you visit, the time spent on those pages, information you
+                  search for on the Website, access times and dates, and other
+                  statistics.
+                </p>
+                <p className="my-10 text-gray-500 text-justify text-sm lg:text-base">
+                  Information collected automatically is used only to identify
+                  potential cases of abuse and establish statistical information
+                  regarding the usage and traffic of the Website and Services.
+                  This statistical information is not otherwise aggregated in
+                  such a way that would identify any particular User of the
+                  system.
+                </p>
+              </div>
+
               <h3 className="font-bold" id="section2">
                 Collection of personal information
               </h3>

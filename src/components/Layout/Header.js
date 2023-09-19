@@ -75,7 +75,7 @@ const Header = () => {
                 </li>
                 <li className="">
                   <NavLink
-                    to="/#sectionservice"
+                    to="/#section1"
                     className="text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-2 border-b md:border-none md:mb-0"
                   >
                     Service
@@ -83,13 +83,8 @@ const Header = () => {
                 </li>
                 <li className="">
                   <NavLink
-                    to="/sustainablity"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-white mr-6"
-                        : " " +
-                          " text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-4 border-b md:border-none md:mb-0 mr-6"
-                    }
+                    to="/#section2"
+                    className=" text-[#6d727e] block transition ease-in-out delay-150 md:hover:text-white hover:text-custom-purple-500 mb-4 border-b md:border-none md:mb-0 mr-6"
                   >
                     Sustainability
                   </NavLink>

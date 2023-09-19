@@ -11,7 +11,7 @@ const Contact = () => {
       <AppLayout>
         <section className="max-w-7xl mx-auto py-16">
           <div className="max-w-lg mx-auto text-center">
-            <h1 className="font-medium text-4xl lg:text-5xl mb-4 capitalize text-white">
+            <h1 className="font-bold text-4xl lg:text-5xl mb-4 capitalize text-white">
               Get in touch
             </h1>
             <p className="text-gray-500 mb-8">
@@ -140,31 +140,42 @@ const Contact = () => {
                 <MiniCard />
                 <div className="rounded-xl flex gap-6 bg-[#293041] border-t border-[#434959] py-6 px-2 md:p-6 my-12 md:w-96 mx-auto lg:ml-auto">
                   <div className="bg-gray-900 rounded-full w-16 h-16 p-4">
-                    <MdPhonelinkRing size={30} />
+                    <MdPhonelinkRing
+                      size={30}
+                      className="text-custom-purple-500"
+                    />
                   </div>
                   <div className="flex">
                     <ul className="text-sm md:text-base leading-loose">
                       <div className="mb-4">
-                        <small className="text-custom-white-500 capitalize">
-                          usa
+                        <small className="text-custom-white-500 text-xs capitalize px-4 py-1 bg-purple-300/20 rounded-xl">
+                          Japan
                         </small>
 
-                        <li>+251447788855</li>
+                        <li className="pt-1 text-xs lg:text-sm">
+                          +251447788855
+                        </li>
                       </div>
                       <div className="mb-4">
-                        <small className="text-custom-white-500 capitalize">
+                        <small className="text-custom-white-500 text-xs capitalize px-4 py-1 bg-purple-300/20 rounded-xl">
                           usa
                         </small>
 
-                        <li>+251447788855</li>
+                        <li className="pt-1 text-xs lg:text-sm">
+                          +251447788855
+                        </li>
                       </div>
                       <div className="mb-4">
-                        <small className="text-custom-white-500 capitalize">
-                          usa
+                        <small className="text-custom-white-500 text-xs capitalize px-4 py-1 bg-purple-300/20 rounded-xl">
+                          China
                         </small>
 
-                        <li>+251447788855</li>
-                        <li>+251447788855</li>
+                        <li className="pt-1 text-xs lg:text-sm">
+                          +251447788855
+                        </li>
+                        <li className="pt-1 text-xs lg:text-sm">
+                          +251447788855
+                        </li>
                       </div>
                     </ul>
                   </div>
