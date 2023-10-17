@@ -32,15 +32,12 @@ const Home = () => {
   return (
     <>
       <AppLayout>
-        <section className=" bg-custom-dark-500/80">
+        <section className="bg-custom-dark-500/80">
           <div className="max-w-[1280px] mx-2 md:mx-auto">
             <div className="flex flex-wrap justify-between">
               <div className="md:w-1/2 my-auto md:pr-4 py-24">
                 <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200">
-                  Premier Destination for
-                  <span className="text-[#c8956e]"> Minerals </span>
-                  and <span className="text-[#c8956e]"> Mining </span>
-                  Expertise.
+                  Premier Destination for Minerals and Mining Expertise.
                 </h1>
                 <p className="text-gray-500 py-4 lg:py-6 max-w-lg">
                   Embracing the Earth's Treasures: Unleashing Nature's Riches
@@ -52,30 +49,23 @@ const Home = () => {
                   <OutlineButton text="Learn More" goto="/service" />
                 </div>
               </div>
-              {/* <div className="w-1/2 my-auto border-4 border-transparent bg-repeat-round">
-                <img
-                  className="w-96 object-cover brightness-75 contrast-100"
-                  src={require("../assets/maybe.png")}
-                  alt="About Lambano"
-                  loading="lazy"
-                />
-              </div> */}
               <div className="md:w-1/2 my-auto md:pr-4">
-                <div className="relative block group " href="#0">
+                <div className="relative block group" href="#0">
                   <div
-                    className="absolute inset-0 rounded-xl bg-gray-800 hidden md:block transform md:translate-y-2 md:translate-x-4 xl:translate-y-4 xl:translate-x-8 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out pointer-events-none"
                     aria-hidden="true"
-                  ></div>
-                  <figure className="relative h-0 pb-[56.25%] md:pb-[75%] lg:pb-[56.25%] overflow-hidden transform md:-translate-y-2 xl:-translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out">
-                    <img
-                      className="rounded-xl absolute inset-0 w-full h-full object-cover brightness-75 contrast-100 transform hover:scale-105 transition duration-700 ease-out"
-                      src="https://img.freepik.com/free-photo/piece-gold-table_91008-586.jpg?w=1380&t=st=1693904288~exp=1693904888~hmac=2030fc4d52ea2204197833023d9dc373f83bb9f09ff152b38689202076136e06"
-                      width="540"
-                      height="303"
-                      alt="Mineral image"
-                      loading="lazy"
-                    />
-                  </figure>
+                    class="absolute top-16 inset-0 grid grid-cols-2 -space-x-52 opacity-20 z-10"
+                  >
+                    <div class="blur-[50px] h-72 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                    {/* <div class="blur-[80px] h-44 bg-gradient-to-r from-cyan-400 to-sky-300"></div> */}
+                  </div>
+                  <img
+                    className="w-[60%] mx-auto"
+                    src={require("../assets/crystal2.png")}
+                    width="540"
+                    height="303"
+                    alt="Minerals"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -340,9 +330,6 @@ const Home = () => {
               />
             </div>
           </div>
-          {/* <button className="w-full bg-teal-500 px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
-      Learn More
-    </button> */}
         </section>
 
         <section className="mx-2 md:mx-auto mt-5 py-12">
@@ -355,24 +342,25 @@ const Home = () => {
             </div>
             <img
               loading="lazy"
+              alt="our location in different parts of the world"
               src={require("../assets/map.png")}
               className="w-full md:w-[60%] lg:w-1/2 mx-auto my-20"
             />
           </div>
         </section>
 
-        <section
-          className="py-24 bg-custom-white-500 bg-cover bg-blend-overlay"
-          // style={{ backgroundImage: `url(${require("../assets/nbg.png")})` }}
-        >
+        <section className="py-24 bg-custom-white-500 bg-cover bg-blend-overlay">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                From the blog
-              </h2>
-              <p className="mt-2 text-lg leading-8 text-gray-600">
-                Learn about mining and minerals.
-              </p>
+            <div className="flex justify-between">
+              <div className="mx-auto max-w-2xl lg:mx-0">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  From the blog
+                </h2>
+                <p className="mt-1 text-lg leading-8 text-gray-600">
+                  Learn about mining and minerals.
+                </p>
+              </div>
+              <OutlineButton goto="/blog" text="view All" />
             </div>
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none md:grid-cols-2 lg:grid-cols-3">
               {blogdata.map(

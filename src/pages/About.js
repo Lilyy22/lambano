@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import AppLayout from "../components/Layout/AppLayout";
 import { OutlineButton, SolidButton } from "../components/utils/Button";
 import Small from "../components/utils/Small";
+import { useLocation } from "react-router-dom";
+import { TeamCard } from "../components/TeamCard";
+import { HeadingCenter } from "../components/Heading";
 
 const About = () => {
+  const location = useLocation();
+  const section1 = useRef(null);
+
+  useEffect(() => {
+    if (location.hash) {
+      if (section1.current && location.hash === "#section1") {
+        section1.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <AppLayout>
@@ -13,7 +26,31 @@ const About = () => {
         >
           <div className="max-w-[1280px] mx-2 md:mx-auto">
             <div className="w-full md:max-w-2xl my-auto md:pr-4 md:mx-auto text-center mb-20">
-              <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200">
+              <span className="relative inline-block">
+                <svg
+                  viewBox="0 0 52 24"
+                  fill="currentColor"
+                  className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-custom-white-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                >
+                  <defs>
+                    <pattern
+                      id="7b568941-9ed0-4f49-85a0-5e21ca6c7ad6"
+                      x="0"
+                      y="0"
+                      width=".135"
+                      height=".30"
+                    >
+                      <circle cx="1" cy="1" r=".7" />
+                    </pattern>
+                  </defs>
+                  <rect
+                    fill="url(#7b568941-9ed0-4f49-85a0-5e21ca6c7ad6)"
+                    width="52"
+                    height="24"
+                  />
+                </svg>
+              </span>
+              <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200 inline-block">
                 We pride ourselves in giving full-cycle services
               </h1>
               <p className="text-gray-500 py-4 lg:py-6">
@@ -24,7 +61,7 @@ const About = () => {
               <OutlineButton
                 text="Get in touch"
                 goto="/contact"
-                margin="mx-auto"
+                customStyle="mx-auto"
               />
             </div>
             <div className="w-full md:max-w-5xl my-auto md:pr-4 md:mx-auto">
@@ -86,13 +123,10 @@ const About = () => {
               </div>
             </div>
           </div>
-          {/* <button className="w-full bg-teal-500 px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
-      Learn More
-    </button> */}
         </section>
 
         {/* values */}
-        <section className="bg-custom-white-500">
+        <section id="section1" ref={section1} className="bg-custom-white-500">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
             <div className="lg:order-last">
               <div>
@@ -175,111 +209,23 @@ const About = () => {
         </section>
 
         <section className="max-w-3xl mx-auto bg-custom-dark-500 py-12 text-center">
-          <Small text="Our Team" />
-          <h1 className="font-bold text-2xl text-gray-200 text-center capitalize">
-            meet our dedicated professionals
-          </h1>
-          <div className="flex flex-wrap justify-items-center items-center py-20">
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Jhon Doe
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">
-                Network manager
-              </p>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://img.freepik.com/premium-photo/black-woman-portrait-face-isolated-gray-background-profile-ambition-vision-confident-african-american-female-person-lady-model-looking-with-smile-career-job-hair-style_590464-154640.jpg"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Emily Stwert
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">ceo</p>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://img.freepik.com/premium-photo/black-woman-portrait-face-isolated-gray-background-profile-ambition-vision-confident-african-american-female-person-lady-model-looking-with-smile-career-job-hair-style_590464-154640.jpg"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Emily Stwert
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">accountant</p>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Jhon Doe
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">ceo</p>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Jhon Doe
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">ceo</p>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_88Pw6jbIKvC5Ef_BUmtFvNA8mCSUkGEg6w&usqp=CAU"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Jhon Becky
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">miner</p>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_88Pw6jbIKvC5Ef_BUmtFvNA8mCSUkGEg6w&usqp=CAU"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Jhon Becky
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">ceo</p>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/4 lg;flex-1 text-center mb-6">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_88Pw6jbIKvC5Ef_BUmtFvNA8mCSUkGEg6w&usqp=CAU"
-                alt="happy african labors"
-                className="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-gray-500"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-lg capitalize text-gray-200">
-                Jhon Becky
-              </h1>
-              <p className="text-gray-500 text-sm italic px-4">
-                communication officer
-              </p>
-            </div>
+          <HeadingCenter intro="our team" title="Meet the team" />
+          <div className="flex flex-wrap justify-evenly py-20 mt-12">
+            <TeamCard
+              name="John Doe"
+              jobtitle="Accountant"
+              photo="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            />
+            <TeamCard
+              name="John Doe"
+              jobtitle="Accountant"
+              photo="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            />
+            <TeamCard
+              name="John Doe"
+              jobtitle="Accountant"
+              photo="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBwZXJzb258ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            />
           </div>
         </section>
       </AppLayout>

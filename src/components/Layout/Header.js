@@ -5,7 +5,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
-  console.log(menuToggle);
   return (
     <>
       <header className="bg-custom-dark-500 sticky top-0 w-full z-50 transition-all delay-100 ease-in py-2 md:py-4 border-b border-gray-800">

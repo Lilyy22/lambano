@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { SolidButton } from "../utils/Button";
 
 const Footer = () => {
+  const [userEmail, setUserEmail] = useState("");
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    console.log("hksjdhkh " + userEmail);
+    setUserEmail("");
+  };
   return (
     <footer className="bg-gray-900">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 sm:px-6 lg:px-8">
@@ -27,18 +32,32 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
-              <form className="w-full">
+              <form className="w-full" onSubmit={handleSubscribe}>
                 <label htmlFor="UserEmail" className="sr-only">
                   Email
                 </label>
                 <div className="sm:flex sm:items-center sm:gap-4">
                   <input
+                    className="mb-2 w-full text-gray-300 border-none p-3 focus:border-gray-200 focus:ring-gray-200 rounded-lg bg-gray-800"
+                    placeholder="example@example.com"
                     type="email"
                     id="UserEmail"
-                    placeholder="example@example.com"
-                    className="mb-2 w-full border-none p-3 focus:border-transparent focus:ring-transparent sm:text-sm rounded-lg bg-gray-800"
+                    value={userEmail}
+                    onChange={(e) => {
+                      setUserEmail(e.target.value);
+                    }}
+                    required
                   />
-                  <SolidButton text="Subscribe" />
+                  <button
+                    type="submit"
+                    className={
+                      "capitalize relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-custom-purple-500 before:transition before:duration-300 hover:before:bg-custom-purple-500/80 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                    }
+                  >
+                    <span className="relative text-base font-semibold text-white">
+                      Subscribe
+                    </span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -92,7 +111,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/#section1"
+                    to="/#section1"
                     className="text-gray-500 transition hover:opacity-75"
                   >
                     Meet the Team
@@ -100,10 +119,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    to="/blog"
                     className="text-gray-500 transition hover:opacity-75"
                   >
-                    News/Posts
+                    Blog
                   </Link>
                 </li>
               </ul>
@@ -161,7 +180,7 @@ const Footer = () => {
             <div className="col-span-2 sm:col-span-1">
               <p className="font-medium text-gray-400">Get in touch</p>
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
+                {/* <li>
                   <Link
                     href="#"
                     className="text-gray-500 transition hover:opacity-75"
@@ -176,13 +195,21 @@ const Footer = () => {
                   >
                     +251935678849
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="#"
                     className="text-gray-500 transition hover:opacity-75"
                   >
                     info@lambanometals.com
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-500 transition hover:opacity-75"
+                  >
+                    support@lambanometals.com
                   </Link>
                 </li>
 

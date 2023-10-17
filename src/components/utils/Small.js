@@ -3,7 +3,7 @@ import React from "react";
 const Small = ({ text }) => {
   return (
     <>
-      <small className="text-custom-purple-500 capitalize">{text}</small>
+      <small className="text-purple-500 bg-gray-800 px-4 py-1 rounded-xl capitalize">{text}</small>
     </>
   );
 };
