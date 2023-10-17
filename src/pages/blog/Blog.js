@@ -8,13 +8,15 @@ export const Blog = () => {
     <>
       <AppLayout>
         <main className="bg-custom-white-500">
-          <div className="py-8 text-center">
-            <h1 className="text-3xl font-bold lg:text-4xl">MINIMAL BLOG</h1>
-            <p className="text-gray-500 mt-1">lorem lorem lorem lorem lorem</p>
+          <div className="py-12 text-center">
+            <h1 className="text-3xl font-bold lg:text-4xl">Explore!</h1>
+            <p className="text-gray-500 mt-1">
+              Learn about minerals and mining industeries.
+            </p>
           </div>
 
-          <div className="max-w-7xl md:mx-auto flex flex-wrap">
-            <div className="w-full lg:w-[75%] px-2 lg:px-6">
+          <div className="max-w-7xl md:mx-auto flex flex-wrap pb-32">
+            <div className="w-full px-2 lg:px-6">
               <div className="py-4 w-full roundex-xl border-b border-gray-400/50">
                 <div className="">
                   <ul className="flex justify-start">
@@ -33,7 +35,10 @@ export const Blog = () => {
                   </ul>
                 </div>
               </div>
-              <div className="grid md:grid-cols-2 gap-8 mx-auto pt-10">
+              <div
+                className="grid md:grid-cols-3
+               gap-8 mx-auto pt-10"
+              >
                 {blogdata.map(
                   ({
                     img,
@@ -61,8 +66,6 @@ export const Blog = () => {
                 )}
               </div>
             </div>
-
-            <div className="w-full lg:w-[25%] bg-slate-200">somt</div>
           </div>
         </main>
       </AppLayout>

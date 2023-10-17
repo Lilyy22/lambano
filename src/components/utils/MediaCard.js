@@ -1,19 +1,16 @@
 import React from "react";
 
-const MediaCard = ({ title, body, img }) => {
+const MediaCard = ({ title, body, leftMargin, children }) => {
   return (
     <>
-      <div className="w-96 lg:w-[22%] text-center mb-6 mx-auto">
-        <img
-          loading="lazy"
-          src={img}
-          alt="happy african labors"
-          className="rounded-full w-32 h-32 object-cover mx-auto mb-4 border border-gray-500"
-        />
-        <h1 className="font-bold text-lg xl:text-xl capitalize mb-2">
-          {title}
-        </h1>
-        <p className="text-gray-500 text-sm px-4 max-w-sm mx-auto">{body}</p>
+      <div
+        className={`w-[90%] mb-4 text-left px-8 py-4 bg-gray-200 border shadow rounded-xl ${
+          leftMargin ? " -ml-10" : ""
+        }`}
+      >
+        {children}
+        <h1 className="font-bold mb-1">{title}</h1>
+        <p className="text-gray-400">{body}</p>
       </div>
     </>
   );

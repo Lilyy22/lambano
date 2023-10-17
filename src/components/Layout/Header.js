@@ -89,7 +89,7 @@ const Header = () => {
                   </NavLink>
                 </li>
               </ul>
-              <SolidButton text="get in touch" goto="/contact" />
+              <SolidButton text="Let's Talk" goto="/contact" />
             </nav>
           </div>
         </div>

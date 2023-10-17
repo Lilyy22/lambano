@@ -20,36 +20,9 @@ const About = () => {
   return (
     <>
       <AppLayout>
-        <section
-          className="pt-24 pb-20 bg-contain bg-blend-overlay bg-custom-dark-500 mx-auto"
-          // style={{ backgroundImage: `url(${require("../assets/nbg.png")})` }}
-        >
+        <section className="pt-24 pb-20 bg-contain bg-blend-overlay bg-custom-dark-500 mx-auto">
           <div className="max-w-[1280px] mx-2 md:mx-auto">
             <div className="w-full md:max-w-2xl my-auto md:pr-4 md:mx-auto text-center mb-20">
-              <span className="relative inline-block">
-                <svg
-                  viewBox="0 0 52 24"
-                  fill="currentColor"
-                  className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-custom-white-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                >
-                  <defs>
-                    <pattern
-                      id="7b568941-9ed0-4f49-85a0-5e21ca6c7ad6"
-                      x="0"
-                      y="0"
-                      width=".135"
-                      height=".30"
-                    >
-                      <circle cx="1" cy="1" r=".7" />
-                    </pattern>
-                  </defs>
-                  <rect
-                    fill="url(#7b568941-9ed0-4f49-85a0-5e21ca6c7ad6)"
-                    width="52"
-                    height="24"
-                  />
-                </svg>
-              </span>
               <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200 inline-block">
                 We pride ourselves in giving full-cycle services
               </h1>
@@ -66,8 +39,8 @@ const About = () => {
             </div>
             <div className="w-full md:max-w-5xl my-auto md:pr-4 md:mx-auto">
               <img
-                className="rounded-xl w-full h-96 object-cover brightness-75 contrast-100 transform hover:scale-105 transition duration-700 ease-out"
-                src="https://www.mtga.com.au/wp-content/uploads/2022/04/Australian_Mining_Equipment-MTGA-2-scaled.jpg"
+                className="rounded-xl w-[80%] mx-auto h-96 object-cover brightness-75 contrast-100 transform hover:scale-105 transition duration-700 ease-out"
+                src="https://img.freepik.com/free-photo/millennial-asia-businessmen-businesswomen-meeting-brainstorming-ideas-about-new-paperwork-project-colleagues-working-together-planning-success-strategy-enjoy-teamwork-small-modern-night-office_7861-2386.jpg?w=1380&t=st=1697541010~exp=1697541610~hmac=0ce82478bd733ae80ed3efe5d4268ecff1d723951057db506d42fd2a43bcdd52"
                 width="540"
                 height="303"
                 alt="About Lambano"
@@ -77,7 +50,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className="my-2">
+        <section className="my-2 relative">
           <div className="max-w-xl mx-auto border-y border-gray-800 py-12">
             <h1 className="text-3xl font-bold text-gray-200 mb-6 text-center">
               Company Description
@@ -94,6 +67,12 @@ const About = () => {
               to be a community based sustainable supplier of major industrial
               commodities, both for domestic and global markets.
             </p>
+          </div>
+          <div
+            aria-hidden="true"
+            class="absolute top-16 inset-0 grid grid-cols-2 -space-x-52 opacity-10 z-10"
+          >
+            <div class="blur-[50px] h-72 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
           </div>
         </section>
 
@@ -209,7 +188,11 @@ const About = () => {
         </section>
 
         <section className="max-w-3xl mx-auto bg-custom-dark-500 py-12 text-center">
-          <HeadingCenter intro="our team" title="Meet the team" />
+          <HeadingCenter
+            intro="our team"
+            title="Meet the team"
+            headingLight={true}
+          />
           <div className="flex flex-wrap justify-evenly py-20 mt-12">
             <TeamCard
               name="John Doe"

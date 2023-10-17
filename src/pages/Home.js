@@ -8,6 +8,8 @@ import { blogdata, faqData } from "../data/data";
 import Small from "../components/utils/Small";
 import { OutlineButton, SolidButton } from "../components/utils/Button";
 import { useLocation } from "react-router-dom";
+import { HeadingCenter, HeadingLeft } from "../components/Heading";
+import MineralCard from "../components/MineralCard";
 
 const Home = () => {
   const location = useLocation();
@@ -35,31 +37,30 @@ const Home = () => {
         <section className="bg-custom-dark-500/80">
           <div className="max-w-[1280px] mx-2 md:mx-auto">
             <div className="flex flex-wrap justify-between">
-              <div className="md:w-1/2 my-auto md:pr-4 py-24">
-                <h1 className="font-extrabold text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200">
+              <div className="md:w-1/2 my-auto md:pr-4 py-20">
+                <h1 className="font-extrabold text-center md:text-left text-4xl lg:text-4xl xl:text-5xl capitalize text-gray-200">
                   Premier Destination for Minerals and Mining Expertise.
                 </h1>
-                <p className="text-gray-500 py-4 lg:py-6 max-w-lg">
+                <p className="text-gray-500 py-4 lg:py-6 md:max-w-lg text-center md:text-left">
                   Embracing the Earth's Treasures: Unleashing Nature's Riches
                   for Sustainable Success. Enabling Sustainable Growth and
                   Success.
                 </p>
-                <div className="flex gap-4">
+                <div className="flex justify-center md:justify-start gap-4">
                   <SolidButton text="Get in touch" goto="/contact" />
-                  <OutlineButton text="Learn More" goto="/service" />
+                  <OutlineButton text="Learn More" goto="/#section1" />
                 </div>
               </div>
-              <div className="md:w-1/2 my-auto md:pr-4">
+              <div className="w-full md:w-1/2 my-auto md:pr-4 order-first md:order-last">
                 <div className="relative block group" href="#0">
                   <div
                     aria-hidden="true"
                     class="absolute top-16 inset-0 grid grid-cols-2 -space-x-52 opacity-20 z-10"
                   >
                     <div class="blur-[50px] h-72 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
-                    {/* <div class="blur-[80px] h-44 bg-gradient-to-r from-cyan-400 to-sky-300"></div> */}
                   </div>
                   <img
-                    className="w-[60%] mx-auto"
+                    className="w-[50%] md:w-[60%] mx-auto flex-1"
                     src={require("../assets/crystal2.png")}
                     width="540"
                     height="303"
@@ -141,8 +142,11 @@ const Home = () => {
         </section>
 
         <div className="text-center py-16 text-gray-200 mx-auto border-t border-gray-800">
-          <Small text="who we are" />
-          <h1 className="font-bold text-3xl">Lambano Metals</h1>
+          <HeadingCenter
+            intro="Who we are"
+            title="Lambano Metals"
+            headingLight={true}
+          />
           <p className="max-w-lg mx-auto my-4 text-gray-500">
             Lambano Metals is a minerals and metals supplier headquartered at
             Addis Ababa, Ethiopia. We are focused majorly on industrial minerals
@@ -153,103 +157,67 @@ const Home = () => {
 
         {/* minerals */}
         <section id="section4" ref={section4} className="bg-custom-white-500">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-            <div>
-              <div>
-                <Small text="Our products" />
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Mineral Specifications
-                </h2>
-                <p className="mt-4 text-gray-500">
-                  We produce and market a diverse range of metal and mineral
-                  ores both from our various mining sites, and small scale
-                  miners and commodity suppliers. Our diverse range of
-                  commodities include: Tantalum ore, Nickel ore, Berlin ore,
-                  Chrome ore, Dolomite and other metals and minerals.
-                </p>
-              </div>
-
-              <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Lithium</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Crystal Structure: Body-centered cubic Color: Silvery-white
-                  </dd>
-                </div>
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Titanium</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Crystal Structure: Hexagonal close-packed (hcp) Color:
-                    Silver-gray
-                  </dd>
-                </div>
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Nickel</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Crystal Structure: Face-centered cubic (fcc) Color:
-                    Silvery-white
-                  </dd>
-                </div>
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Tantalum</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Hand sanded and finished with natural oil
-                  </dd>
-                </div>
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Chromite</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Wood card tray and 3 refill packs
-                  </dd>
-                </div>
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Quartz</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Made from natural materials. Grain and color vary with each
-                    item.
-                  </dd>
-                </div>
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Dolomite</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Made from natural materials. Grain and color vary with each
-                    item.
-                  </dd>
-                </div>
-                <div className="border-t border-gray-200 pt-2">
-                  <dt className="font-medium text-gray-900">Feldspar</dt>
-                  <dd className="mt-2 text-sm text-gray-500">
-                    Made from natural materials. Grain and color vary with each
-                    item.
-                  </dd>
-                </div>
-              </dl>
+          <div className="max-w-[1280px] mx-2 md:mx-auto md:px-6 py-16">
+            <div className="mb-8">
+              <HeadingLeft
+                intro="Our products"
+                title="Mineral Specifications"
+                introLight={true}
+              />
+              <p className="mt-4 text-sm lg:text-base text-gray-500">
+                We produce and market a diverse range of metal and mineral ores
+                both from our various mining sites, and small scale miners and
+                commodity suppliers. Our diverse range of commodities include:
+                Tantalum ore, Nickel ore, Berlin ore, Chrome ore, Dolomite and
+                other metals and minerals.
+              </p>
             </div>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1661866916518-1dcc1e907c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-                className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
-                loading="lazy"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1611377247946-ae36f1d725f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Top down view of walnut card tray with embedded magnets and card groove."
-                className="rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
-                loading="lazy"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1584715642530-3cb85fc36539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Side of walnut card tray with card groove and recessed card area."
-                className="hidden md:block rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
-                loading="lazy"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1627768919962-fb6af351759c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=680&q=80"
-                alt="Walnut card tray filled with cards and card angled in dedicated groove."
-                className="hidden md:block rounded-2xl object-cover h-64 md:h-72 bg-gray-100"
-                loading="lazy"
-              />
+            <div className="">
+              <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-4">
+                <MineralCard
+                  product="Lithium"
+                  text="In air it oxidizes to lithium oxide. Its melting point of 180.50 °C (453.65 K; 356.90 °F) and its boiling point of 1,342 °C (1,615 K; 2,448 °F)"
+                  photo="https://www.aquametals.com/wp-content/uploads/2023/04/iStock-1402359102.jpg"
+                />
+                <MineralCard
+                  product="Titanium"
+                  text="Crystal Structure: Hexagonal close-packed (hcp) Color:Silver-gray"
+                  photo="https://www.rappler.com/tachyon/2022/03/titanium-metallurgy-plant-shutterstock.jpg"
+                />
+                <MineralCard
+                  product="Nickel"
+                  text="Crystal Structure: Hexagonal close-packed (hcp) Color:Silver-gray"
+                  photo="https://live-production.wcms.abc-cdn.net.au/6501ca9a950e56c114fd9dcfc269b9fd?impolicy=wcms_crop_resize&cropH=2268&cropW=4032&xPos=0&yPos=515&width=862&height=485"
+                />
+                <MineralCard
+                  product="Tantalum"
+                  text="Hand sanded and finished with natural oil"
+                  photo="https://cdn.thomasnet.com/insights-images/94d39c20-06f0-4e5e-add1-33e906dada72/750px.png"
+                />
+                <MineralCard
+                  product="Chromite"
+                  text="Wood card tray and 3 refill packs"
+                  photo="https://cfloworld.com/images/industries/chromite/chromite-featured.jpg"
+                />
+                <MineralCard
+                  product="Quartz"
+                  text="Made from natural materials. Grain and color vary with each
+                  item."
+                  photo="https://upload.wikimedia.org/wikipedia/commons/c/ce/Quartz_Br%C3%A9sil.jpg"
+                />
+                <MineralCard
+                  product="Dolomite"
+                  text="Made from natural materials. Grain and color vary with each
+                  item."
+                  photo="https://mineralexpert.org/images/article-photos/dolomite/dolomite-pyrite-gemerska-poloma-slovakia.jpg"
+                />
+                <MineralCard
+                  product="Feldspar"
+                  text="Made from natural materials. Grain and color vary with each
+                  item."
+                  photo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwV1LXWCHhefYCxkn2dBgqZ2ldZjPB-ZilVw&usqp=CAU"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -258,41 +226,42 @@ const Home = () => {
         <section
           id="section1"
           ref={section1}
-          className="flex flex-col justify-center antialiased bg-custom-dark-500 text-gray-200 min-h-screen"
+          className=" bg-custom-dark-500 text-gray-200 min-h-screen pt-6"
         >
-          <div className="text-center py-12">
-            <Small text="Our services" />
-            <h2 className="text-2xl font-bold tracking-tight text-gray-300 sm:text-4xl">
-              We help you mine
-            </h2>
-          </div>
-          <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
-            <SplitLayout
-              category="services"
-              title="Developing mining projects"
-              body="we have selected rich deposits
+          <HeadingCenter
+            title="We help you mine"
+            intro="Our services"
+            headingLight={true}
+          />
+          <div className="flex flex-col justify-center antialiased">
+            <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
+              <SplitLayout
+                category="services"
+                title="Developing mining projects"
+                body="we have selected rich deposits
               for small and large scale mining projects. These mining project developments
               are in various stages and we are open and ready to collaborate with both
               domestic and international firms to work together."
-              img="https://img.freepik.com/free-photo/large-truck-carrying-sand-platinum-mining-site-africa_181624-60189.jpg?t=st=1693057019~exp=1693057619~hmac=ea495a719ea37f5d6d68ee757e0b9ecdeac292131d4b529f005c314c87c576bd"
-            />
-            <SplitLayout
-              category="services"
-              order=" md:order-last"
-              title="Consulting Service"
-              body="We understand that many firms are showing interest to enter the mining
+                img="https://img.freepik.com/free-photo/large-truck-carrying-sand-platinum-mining-site-africa_181624-60189.jpg?t=st=1693057019~exp=1693057619~hmac=ea495a719ea37f5d6d68ee757e0b9ecdeac292131d4b529f005c314c87c576bd"
+              />
+              <SplitLayout
+                category="services"
+                order=" md:order-last"
+                title="Consulting Service"
+                body="We understand that many firms are showing interest to enter the mining
               sector of Ethiopia. And we know there is a lot of research and guidance
               needed for the new entries."
-              img="https://img.freepik.com/free-photo/three-people-discussing-plan-factory_1303-30624.jpg?w=1060&t=st=1693057151~exp=1693057751~hmac=0824bb5b65d9e2a7afd45ecffeecfffafc6f2aa529c57cc61d9aa28fb417435e"
-            />
-            <SplitLayout
-              category="services"
-              title="Supplying Machinery and Technologies"
-              body="Our major motivation is empowering artesian and small scale miners. We
+                img="https://img.freepik.com/free-photo/three-people-discussing-plan-factory_1303-30624.jpg?w=1060&t=st=1693057151~exp=1693057751~hmac=0824bb5b65d9e2a7afd45ecffeecfffafc6f2aa529c57cc61d9aa28fb417435e"
+              />
+              <SplitLayout
+                category="services"
+                title="Supplying Machinery and Technologies"
+                body="Our major motivation is empowering artesian and small scale miners. We
               provide a variety of equipment, machinery and technologies that mechanize
               the mining work."
-              img="https://img.freepik.com/free-photo/close-up-construction-site-excavator_1112-1223.jpg?size=626&ext=jpg&ga=GA1.2.471747871.1692955696&semt=ais"
-            />
+                img="https://img.freepik.com/free-photo/close-up-construction-site-excavator_1112-1223.jpg?size=626&ext=jpg&ga=GA1.2.471747871.1692955696&semt=ais"
+              />
+            </div>
           </div>
         </section>
 
@@ -302,44 +271,80 @@ const Home = () => {
           className="py-20 font-tailwind bg-custom-white-500"
         >
           <div className="max-w-[1280px] mx-auto text-center">
-            <Small text="we care about" />
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mt-2">
-              Sustainability
-            </h2>
-            <div className="flex flex-wrap md:justify-between my-24">
-              <MediaCard
-                title="Environment management"
-                body="we approach our environment with care and attention."
-                img="https://media.gettyimages.com/id/1324872027/photo/african-female-gardener-working-in-greenhouse.jpg?s=612x612&w=gi&k=20&c=6QkGl4sV6LsYE-YQ3504kU_ww4Vwh1zutr0ikHdyTAE="
-              />
-              <MediaCard
-                title="Community engagement"
-                body="We give back 40 percent to the community from our revenue."
-                img="https://scatec.com/wp-content/uploads/sites/7/2020/03/Human-rights_Scatec-Solar-676x410.jpg"
-              />
-              <MediaCard
-                title="Human rights"
-                body="We do everything under the law to protect our workforce
+            <HeadingCenter
+              intro="we care"
+              title="Sustainability"
+              introLight={true}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 512 512"
+                className="fill-custom-purple-500"
+              >
+                <path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z" />
+              </svg>
+            </HeadingCenter>
+            <p className="max-w-lg text-center font-medium text-gray-500 mx-auto my-4">
+              We want to stress the point that We make every effort to protect
+              and ensure the safety of our environment and the community.
+            </p>
+            <div className="flex justify-evenly pt-12">
+              <div className="w-1/2 my-auto">
+                <MediaCard
+                  title="Environment management"
+                  body="We approach our environment with care and attention."
+                  leftMargin={true}
+                />
+                <MediaCard
+                  title="Community engagement"
+                  body="We give back 40 percent to the community from our revenue."
+                />
+                <MediaCard
+                  title="Human rights"
+                  body="We do everything under the law to protect our workforce
                 from human rights violations."
-                img="https://www.amnesty.org.uk/files/styles/poster/s3/2020-04/269218_%282%29.jpg?VersionId=5qqjobVSTI67CwDLG_gDbEOvq2Nw6QFV&itok=e-_6vTMh"
-              />
-              <MediaCard
-                title="Health and safety"
-                body="We believe that productivity doesnot come before safety."
-                img="https://nosa.co.za/wp-content/uploads/2020/12/December-blog-2-01-scaled.jpg"
-              />
+                  leftMargin={true}
+                />
+                <MediaCard
+                  title="Health and safety"
+                  body="We believe that productivity doesnot come before safety."
+                />
+              </div>
+
+              <div className="w-[50%] flex gap-4">
+                <img
+                  src="https://www.ecolab.com/-/media/Widen/Nalco-Water/Water/iStock-935746242_Crop_550x310.jpg?h=310&iar=0&w=550&hash=AC5EA04FC21FB962333BB6F9BD03BF29"
+                  alt=""
+                  className="w-1/2 rounded-2xl object-cover brightness-75 hover:brightness-100 transition-all"
+                  loading="lazy"
+                />
+                <div className="w-1/2 overflow-hidden">
+                  <img
+                    src="https://www.washingtonpost.com/graphics/2019/business/hershey-nestle-mars-chocolate-child-labor-west-africa/img/1800/GWZZ2JDCEEI6TPZE3NFZ7NRKUI.jpg"
+                    alt=""
+                    className="w-full h-[47%] rounded-2xl object-cover brightness-75 hover:brightness-100 transition-all mb-4"
+                    loading="lazy"
+                  />
+                  <img
+                    src="https://www.amnesty.org.uk/files/styles/poster/s3/2020-04/269218_%282%29.jpg?VersionId=5qqjobVSTI67CwDLG_gDbEOvq2Nw6QFV&itok=e-_6vTMh"
+                    alt=""
+                    className="w-full h-1/2 rounded-2xl object-cover brightness-75 hover:brightness-100 transition-all"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="mx-2 md:mx-auto mt-5 py-12">
           <div className="relative isolate">
-            <div className="text-center my-6">
-              <Small text="our representatives" />
-              <h1 className="font-bold text-3xl capitalize text-gray-200">
-                We are all over the world.
-              </h1>
-            </div>
+            <HeadingCenter
+              intro="Our representatives"
+              title="We are all over the world."
+              headingLight={true}
+            />
             <img
               loading="lazy"
               alt="our location in different parts of the world"
@@ -397,11 +402,12 @@ const Home = () => {
           ref={section3}
           className="md:mx-20 lg:w-[70%] lg:mx-auto py-24 text-center"
         >
-          <Small text="Find out more" />
-          <h1 className="font-bold text-3xl capitalize mb-12 text-gray-200">
-            Frequently Asked Questions
-          </h1>
-          <div className="text-slate-300 rounded max-w-5xl mx-auto">
+          <HeadingCenter
+            intro="Find out more"
+            title="Frequently Asked Questions."
+            headingLight={true}
+          />
+          <div className="text-slate-300 rounded max-w-5xl mx-auto mt-10">
             {faqData.map(({ question, content, i }) => {
               return (
                 <Accordion question={question} content={content} key={i} />
